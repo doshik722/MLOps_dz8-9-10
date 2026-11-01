@@ -6,6 +6,7 @@
 import argparse
 import hashlib
 import json
+import uuid
 from pathlib import Path
 import release
 
@@ -19,11 +20,11 @@ def digest(data):
 
 
 def read(path):
-    return json.loads(Path(path).read_text())
+    return json.loads(Path(path).read_text(encoding='utf-8'))
 
 
 def write(path,value):
-    Path(path).write_text(json.dumps(value,ensure_ascii=False,indent=2))
+    release.write_json(path,value)
 
 
 def initialize(root):
@@ -62,23 +63,30 @@ def prepare(root):
     write(entry,result);print('PREPARED',result['input_sha256']);return result
 
 
-def run(root,report_name,fail_after_prepare=False):
-    prepared=prepare(root)
-    if fail_after_prepare:raise RuntimeError('Инъекция сбоя после подготовки')
-    manifest=read(root/'manifest-B.json');report=read(root/report_name)
-    release.publish(manifest,report,root/'accepted.json')
-    with (root/'publications.jsonl').open('a') as f:
-        f.write(json.dumps({'model_id':manifest['model_id'],'prepared':prepared['input_sha256']})+'\n')
-    print('PUBLISHED',manifest['model_id'])
+def run(root,report_name,fail_after_prepare=False,fail_after_publish=False):
+    attempt={'attempt_id':str(uuid.uuid4()),'report':report_name,'synthetic':True}
+    try:
+        prepared=prepare(root)
+        if fail_after_prepare:raise RuntimeError('Инъекция сбоя после подготовки')
+        manifest=read(root/'manifest-B.json');report=read(root/report_name)
+        result=release.journaled_publish(manifest,report,root,fail_after_publish)
+        attempt.update(status='complete',**result,input_sha256=prepared['input_sha256'])
+        print('PUBLISHED' if result['published'] else 'UNCHANGED',manifest['model_id'],result['release_id'])
+    except Exception as exc:
+        attempt.update(status='failed',error=str(exc))
+        raise
+    finally:
+        with (root/'attempts.jsonl').open('a',encoding='utf-8') as stream:
+            stream.write(json.dumps(attempt,ensure_ascii=False)+'\n')
 
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--workspace',type=Path,default=Path('.lab'))
     sub=parser.add_subparsers(dest='command',required=True);sub.add_parser('init')
-    run_parser=sub.add_parser('run');run_parser.add_argument('--report',default='report-B.json');run_parser.add_argument('--fail-after-prepare',action='store_true')
+    run_parser=sub.add_parser('run');run_parser.add_argument('--report',default='report-B.json');run_parser.add_argument('--fail-after-prepare',action='store_true');run_parser.add_argument('--fail-after-publish',action='store_true')
     args=parser.parse_args()
     if args.command=='init':initialize(args.workspace)
-    else:run(args.workspace,args.report,args.fail_after_prepare)
+    else:run(args.workspace,args.report,args.fail_after_prepare,args.fail_after_publish)
 
 
 if __name__=='__main__':main()
