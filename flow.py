@@ -58,8 +58,10 @@ def prepare_data(workspace):
 
 
 @task(name='obtain-verified-artifact', cache_policy=NO_CACHE, persist_result=False)
-def obtain_artifact(workspace, manifest_name):
+def obtain_artifact(workspace, manifest_name, prepared):
     separate_windows_state_timestamps()
+    if prepared['data_sha256'] != release.file_sha256(Path(workspace) / 'input.txt'):
+        raise ValueError('Вход изменился после подготовки')
     manifest = read(Path(workspace) / manifest_name)
     release.verify_files(manifest, workspace)
     print('ARTIFACT_VERIFIED', manifest['model_id'], flush=True)
@@ -103,7 +105,7 @@ def release_flow(workspace, synthetic=False, manifest_name='manifest-candidate.j
         print('PREPARATION_STATE', state.name, prepared['preparation_key'])
         if fail_after_prepare:
             raise RuntimeError('Инъекция сбоя после подготовки')
-        manifest = obtain_artifact(str(root), manifest_name)
+        manifest = obtain_artifact(str(root), manifest_name, prepared)
         report = assess(str(root), manifest, report_name, synthetic)
         result = publish_or_preserve(str(root), manifest, report, fail_after_publish)
         attempt.update(result=result, status='complete')
