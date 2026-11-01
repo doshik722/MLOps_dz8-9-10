@@ -1,0 +1,133 @@
+$ flow.py --workspace D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-publication-crash --synthetic --fail-after-publish
+16:12:13.544 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8547
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:12:19.654 | INFO    | Flow run 'electronic-anaconda' - Beginning flow run 'electronic-anaconda' for flow 'hw8910-release'
+16:12:19.862 | INFO    | Task run 'prepare-data-fe0' - PREPARED 6118742fa62fa46e0dcadf53a282bd80331d0c8695c02b0b97c123ec9754a1be
+16:12:19.866 | INFO    | Task run 'prepare-data-fe0' - Finished in state Completed()
+16:12:19.885 | INFO    | Flow run 'electronic-anaconda' - PREPARATION_STATE Completed 6118742fa62fa46e0dcadf53a282bd80331d0c8695c02b0b97c123ec9754a1be
+16:12:19.920 | INFO    | Task run 'obtain-verified-artifact-0c3' - ARTIFACT_VERIFIED fixture-B
+16:12:19.925 | INFO    | Task run 'obtain-verified-artifact-0c3' - Finished in state Completed()
+16:12:19.954 | INFO    | Task run 'evaluate-full-gate-990' - Finished in state Completed()
+16:12:19.989 | ERROR   | Task run 'publish-or-preserve-a36' - Task run failed with exception: RuntimeError('Инъекция сбоя между accepted.json и журналом')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1058, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1755, in run_task_sync
+    engine.call_task_fn(txn)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1075, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 92, in publish_or_preserve
+    return {'status': 'accepted', **release.journaled_publish(manifest, report, workspace, fail_after_publish)}
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\release.py", line 150, in journaled_publish
+    raise RuntimeError('Инъекция сбоя между accepted.json и журналом')
+RuntimeError: Инъекция сбоя между accepted.json и журналом
+16:12:19.992 | ERROR   | Task run 'publish-or-preserve-a36' - Finished in state Failed('Task run encountered an exception RuntimeError: Инъекция сбоя между accepted.json и журналом')
+16:12:19.998 | INFO    | Flow run 'electronic-anaconda' - ATTEMPT {"attempt_id": "aecb3aed-eea4-4d55-87c3-e663f0698835", "flow_run_id": "190b1c91-ba72-4caa-854f-8a1c5f95024a", "synthetic": true, "preparation_state": "Completed", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "969514066558ccede1f2042b4f453e770f1ca53e1a41a29d1f330ecec5e86be1", "preparation_key": "6118742fa62fa46e0dcadf53a282bd80331d0c8695c02b0b97c123ec9754a1be"}, "status": "failed", "error": "RuntimeError: Инъекция сбоя между accepted.json и журналом", "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+16:12:20.832 | ERROR   | Flow run 'electronic-anaconda' - Encountered exception during execution: RuntimeError('Инъекция сбоя между accepted.json и журналом')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 110, in release_flow
+    result = publish_or_preserve(str(root), manifest, report, fail_after_publish)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\tasks.py", line 1240, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1988, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1758, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 622, in result
+    raise self._raised
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1058, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1755, in run_task_sync
+    engine.call_task_fn(txn)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1075, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 92, in publish_or_preserve
+    return {'status': 'accepted', **release.journaled_publish(manifest, report, workspace, fail_after_publish)}
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\release.py", line 150, in journaled_publish
+    raise RuntimeError('Инъекция сбоя между accepted.json и журналом')
+RuntimeError: Инъекция сбоя между accepted.json и журналом
+16:12:20.852 | INFO    | Flow run 'electronic-anaconda' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Инъекция сбоя между accepted.json и журналом')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 139, in <module>
+    main()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 132, in main
+    result = release_flow(str(args.workspace), args.synthetic,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flows.py", line 1887, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2290, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2135, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 788, in result
+    raise self._raised
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 110, in release_flow
+    result = publish_or_preserve(str(root), manifest, report, fail_after_publish)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\tasks.py", line 1240, in __call__
+    return run_task(
+           ^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1988, in run_task
+    return run_task_sync(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1758, in run_task_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 622, in result
+    raise self._raised
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1058, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1755, in run_task_sync
+    engine.call_task_fn(txn)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\task_engine.py", line 1075, in call_task_fn
+    result = call_with_parameters(self.task.fn, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 92, in publish_or_preserve
+    return {'status': 'accepted', **release.journaled_publish(manifest, report, workspace, fail_after_publish)}
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\release.py", line 150, in journaled_publish
+    raise RuntimeError('Инъекция сбоя между accepted.json и журналом')
+RuntimeError: Инъекция сбоя между accepted.json и журналом
+16:12:20.880 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8547
+
+EXIT_CODE=1

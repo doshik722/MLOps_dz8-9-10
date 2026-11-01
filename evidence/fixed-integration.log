@@ -1,0 +1,12 @@
+test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) ... ok
+test_http_loaded_version_and_rollback (test_incidents.IncidentTests.test_http_loaded_version_and_rollback) ... ok
+test_http_not_ready_before_warmup (test_incidents.IncidentTests.test_http_not_ready_before_warmup) ... ok
+test_subprocess_cache_recovery_and_changed_bytes (test_incidents.IncidentTests.test_subprocess_cache_recovery_and_changed_bytes) ... ok
+test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) ... ok
+test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) ... ok
+test_subprocess_repeat_creates_one_publication (test_incidents.IncidentTests.test_subprocess_repeat_creates_one_publication) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 14.076s
+
+OK

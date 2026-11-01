@@ -1,0 +1,1 @@
+PASS: реальные HTTP-ответы STUB: fixture-A → fixture-A → fixture-B → fixture-A

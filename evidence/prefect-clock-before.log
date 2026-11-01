@@ -1,0 +1,132 @@
+16:03:40.831 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8901
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:03:47.065 | INFO    | Flow run 'logical-loon' - Beginning flow run 'logical-loon' for flow 'hw8910-release'
+16:03:47.244 | INFO    | Task run 'prepare-data-474' - Finished in state Cached(type=COMPLETED)
+16:03:47.278 | INFO    | Flow run 'logical-loon' - PREPARATION_STATE Cached 3f2304e1b385b9ef95246576c10a009126a5da4f1c9f1a08c52a805fae9bcac0
+16:03:48.614 | INFO    | Task run 'obtain-verified-artifact-203' - ARTIFACT_VERIFIED 1d0d9ac69f224b7dadf14f7888b26582
+16:03:48.614 | INFO    | Task run 'obtain-verified-artifact-203' - Finished in state Completed()
+16:03:48.656 | INFO    | Task run 'evaluate-full-gate-b0d' - Finished in state Completed()
+16:03:48.673 | INFO    | Task run 'publish-or-preserve-852' - Finished in state Completed()
+16:03:48.673 | INFO    | Flow run 'logical-loon' - ATTEMPT {"attempt_id": "bb73b3f0-db8d-4b1a-83e9-ffc73e10b37c", "flow_run_id": "63ed1c71-e3cd-4510-b8ee-9f6d01fad373", "synthetic": false, "preparation_state": "Cached", "preparation": {"data_sha256": "6a2537fac8f3eae517604fbf9f55d77dcf0bf5aa95c277bcadbbd89504cfa73a", "rows": 50, "config_sha256": "0d0993792ad785044b42022731c31920f7f64ae28f262df414dc46c16ff056a2", "preparation_key": "3f2304e1b385b9ef95246576c10a009126a5da4f1c9f1a08c52a805fae9bcac0"}, "result": {"status": "rejected", "reason": "Регрессия общей метрики accuracy", "published": false}, "status": "complete", "accepted_before": "b3086b6c33b73133e325d96c3e2931a747221bfd8de9c557b3f64ab496cf6c87", "accepted_after": "b3086b6c33b73133e325d96c3e2931a747221bfd8de9c557b3f64ab496cf6c87"}
+16:03:48.723 | ERROR   | prefect.server.services.task_run_recorder - Error flushing 1 events (1 to retry, 0 dropped)
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1958, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1192, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 258, in execute
+    self._adapt_connection._handle_exception(error)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 412, in _handle_exception
+    self._handle_exception_no_connection(self.dbapi, error)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 237, in _handle_exception_no_connection
+    super()._handle_exception_no_connection(dbapi, error)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 409, in _handle_exception_no_connection
+    raise error.with_traceback(exc_info[2])
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 256, in execute
+    return await_(self._execute_async(operation, parameters))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\util\concurrency.py", line 167, in await_
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\util\concurrency.py", line 205, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 279, in _execute_async
+    result = await self._cursor.execute(operation, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\core.py", line 160, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\core.py", line 63, in _connection_worker_thread
+    result = function()
+             ^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: task_run_state.task_run_id, task_run_state.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\server\services\task_run_recorder.py", line 643, in flush
+    await record_bulk_task_run_events([item.event for item in batch])
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\server\services\task_run_recorder.py", line 356, in record_bulk_task_run_events
+    await _record_bulk_task_run_events(events)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\server\services\task_run_recorder.py", line 613, in _record_bulk_task_run_events
+    await _insert_task_run_states(session, [tr.task_run for tr in all_task_runs])
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\server\services\task_run_recorder.py", line 244, in _insert_task_run_states
+    await session.execute(
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 651, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\util\concurrency.py", line 212, in greenlet_spawn
+    result = context.switch(value)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2473, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2363, in _execute_internal
+    compile_state_cls.orm_execute_statement(
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\orm\bulk_persistence.py", line 1341, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1463, in execute
+    return meth(
+           ^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 533, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1683, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1837, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1977, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2347, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1958, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 1192, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 258, in execute
+    self._adapt_connection._handle_exception(error)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 412, in _handle_exception
+    self._handle_exception_no_connection(self.dbapi, error)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 237, in _handle_exception_no_connection
+    super()._handle_exception_no_connection(dbapi, error)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 409, in _handle_exception_no_connection
+    raise error.with_traceback(exc_info[2])
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 256, in execute
+    return await_(self._execute_async(operation, parameters))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\util\concurrency.py", line 167, in await_
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\util\concurrency.py", line 205, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\sqlalchemy\connectors\asyncio.py", line 279, in _execute_async
+    result = await self._cursor.execute(operation, parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\cursor.py", line 32, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\core.py", line 160, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\aiosqlite\core.py", line 63, in _connection_worker_thread
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: task_run_state.task_run_id, task_run_state.timestamp
+[SQL: INSERT INTO task_run_state (task_run_id, type, timestamp, name, message, state_details, data, id, created, updated) VALUES (:task_run_id_m0, :type_m0, :timestamp_m0, :name_m0, :message_m0, :state_details_m0, :data_m0, :id_m0, :created_m0, :updated) ON CONFLICT (id) DO NOTHING]
+[parameters: {'task_run_id_m0': '01a1976c-7041-7a6e-92d1-0ca63685934c', 'type_m0': 'COMPLETED', 'timestamp_m0': '2026-11-01 14:03:48.673323', 'name_m0': 'Completed', 'message_m0': '', 'state_details_m0': '{"flow_run_id": "63ed1c71-e3cd-4510-b8ee-9f6d01fad373", "task_run_id": "01a1976c-7041-7a6e-92d1-0ca63685934c", "child_flow_run_id": null, "scheduled_ ... (205 characters truncated) ... esh_cache": null, "retriable": null, "transition_id": null, "task_parameters_id": null, "traceparent": null, "deployment_concurrency_lease_id": null}', 'data_m0': None, 'id_m0': '01a1976c-7041-703f-96d8-33ece35a37bf', 'created_m0': '2026-11-01 14:03:48.723297', 'updated': '2026-11-01 14:03:48.723297'}]
+(Background on this error at: https://sqlalche.me/e/21/gkpj)
+16:03:49.229 | INFO    | Flow run 'logical-loon' - Finished in state Completed()
+{"status": "rejected", "reason": "Регрессия общей метрики accuracy", "published": false}
+16:03:49.240 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8901

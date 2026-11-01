@@ -1,0 +1,13 @@
+Создан синтетический стенд: D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-recovery
+RUN flow-failure-after-prepare
+RUN flow-resume
+RUN flow-repeat
+RUN flow-changed-input
+RUN flow-changed-config
+Создан синтетический стенд: D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-publication-crash
+RUN flow-crash-after-pointer
+RUN flow-recover-publication
+RUN flow-repeat-publication
+Создан синтетический стенд: D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-negative
+RUN real-flow-rejected
+PASS: восстановление, Cached/Completed, инвалидация, одна публикация и сохранённый отказ.

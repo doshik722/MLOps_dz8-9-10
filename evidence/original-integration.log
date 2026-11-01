@@ -1,0 +1,192 @@
+test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) ... 
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': '', 'max_new_tokens': 32}") ... FAIL
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': 0}") ... FAIL
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': 100000}") ... FAIL
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': '32'}") ... FAIL
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': True}") ... FAIL
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': ' '}") ... FAIL
+  test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx") ... FAIL
+test_http_loaded_version_and_rollback (test_incidents.IncidentTests.test_http_loaded_version_and_rollback) ... FAIL
+test_http_not_ready_before_warmup (test_incidents.IncidentTests.test_http_not_ready_before_warmup) ... FAIL
+test_subprocess_atomic_replace_failure_preserves_pointer (test_incidents.IncidentTests.test_subprocess_atomic_replace_failure_preserves_pointer) ... FAIL
+test_subprocess_cache_recovery_and_changed_bytes (test_incidents.IncidentTests.test_subprocess_cache_recovery_and_changed_bytes) ... FAIL
+test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) ... 
+  test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='tokenizer_revision') ... FAIL
+  test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='template_sha256') ... FAIL
+  test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='max_length') ... FAIL
+  test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='code_revision') ... FAIL
+test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) ... 
+  test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) (report='report-incomplete.json') ... FAIL
+  test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) (report='report-A.json') ... FAIL
+  test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) (report='report-reject.json') ... FAIL
+test_subprocess_repeat_creates_one_publication (test_incidents.IncidentTests.test_subprocess_repeat_creates_one_publication) ... FAIL
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': '', 'max_new_tokens': 32}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': 0}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': 100000}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': '32'}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'x', 'max_new_tokens': True}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': ' '}")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) (payload="{'prompt': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 193, in test_http_invalid_request_never_calls_backend
+    self.assertTrue(400 <= status < 500, f'Некорректный запрос обслужен: {status}')
+AssertionError: False is not true : Некорректный запрос обслужен: 200
+
+======================================================================
+FAIL: test_http_loaded_version_and_rollback (test_incidents.IncidentTests.test_http_loaded_version_and_rollback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 160, in test_http_loaded_version_and_rollback
+    self.assertEqual(old['model_id'], 'fixture-A', 'Указатель изменился, а backend ещё не перезагружен')
+AssertionError: 'fixture-B' != 'fixture-A'
+- fixture-B
+?         ^
++ fixture-A
+?         ^
+ : Указатель изменился, а backend ещё не перезагружен
+
+======================================================================
+FAIL: test_http_not_ready_before_warmup (test_incidents.IncidentTests.test_http_not_ready_before_warmup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 146, in test_http_not_ready_before_warmup
+    self.assertEqual(self.http('/ready')[0], 503)
+AssertionError: 200 != 503
+
+======================================================================
+FAIL: test_subprocess_atomic_replace_failure_preserves_pointer (test_incidents.IncidentTests.test_subprocess_atomic_replace_failure_preserves_pointer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 91, in test_subprocess_atomic_replace_failure_preserves_pointer
+    self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 12, in <module>
+AssertionError: Ошибка атомарной замены не проброшена
+
+
+======================================================================
+FAIL: test_subprocess_cache_recovery_and_changed_bytes (test_incidents.IncidentTests.test_subprocess_cache_recovery_and_changed_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 44, in test_subprocess_cache_recovery_and_changed_bytes
+    self.assertIn('PREPARED', changed.stdout, 'После изменения входа использован прежний кеш')
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nPUBLISHED fixture-B\n' : После изменения входа использован прежний кеш
+
+======================================================================
+FAIL: test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='tokenizer_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 54, in test_subprocess_preparation_config_invalidates
+    self.assertIn('PREPARED', self.command('run', ok=True).stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='template_sha256')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 54, in test_subprocess_preparation_config_invalidates
+    self.assertIn('PREPARED', self.command('run', ok=True).stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='max_length')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 54, in test_subprocess_preparation_config_invalidates
+    self.assertIn('PREPARED', self.command('run', ok=True).stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) (setting='code_revision')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 54, in test_subprocess_preparation_config_invalidates
+    self.assertIn('PREPARED', self.command('run', ok=True).stdout)
+AssertionError: 'PREPARED' not found in 'CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nPUBLISHED fixture-B\n'
+
+======================================================================
+FAIL: test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) (report='report-incomplete.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 62, in test_subprocess_rejects_incomplete_and_foreign_report
+    self.assertNotEqual(result.returncode, 0, 'Несовместимый отчёт получил выпуск')
+AssertionError: 0 == 0 : Несовместимый отчёт получил выпуск
+
+======================================================================
+FAIL: test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) (report='report-A.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 62, in test_subprocess_rejects_incomplete_and_foreign_report
+    self.assertNotEqual(result.returncode, 0, 'Несовместимый отчёт получил выпуск')
+AssertionError: 0 == 0 : Несовместимый отчёт получил выпуск
+
+======================================================================
+FAIL: test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) (report='report-reject.json')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 63, in test_subprocess_rejects_incomplete_and_foreign_report
+    self.assertEqual(hashlib.sha256(pointer.read_bytes()).hexdigest(), before)
+AssertionError: '902f955456a58a9b6a17a289c29ced2d9c625838878152e9ba72d84ab86ca1bc' != '7565758263cbed644aa5d595497d7d3bc56bb5fb366a3fce14f2a22bd37342cf'
+- 902f955456a58a9b6a17a289c29ced2d9c625838878152e9ba72d84ab86ca1bc
++ 7565758263cbed644aa5d595497d7d3bc56bb5fb366a3fce14f2a22bd37342cf
+
+
+======================================================================
+FAIL: test_subprocess_repeat_creates_one_publication (test_incidents.IncidentTests.test_subprocess_repeat_creates_one_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\integration_tests\test_incidents.py", line 71, in test_subprocess_repeat_creates_one_publication
+    self.assertEqual(len(rows), 1, 'Повтор в новом процессе размножил публикации')
+AssertionError: 2 != 1 : Повтор в новом процессе размножил публикации
+
+----------------------------------------------------------------------
+Ran 8 tests in 5.161s
+
+FAILED (failures=19)
+
+EXIT_CODE=1

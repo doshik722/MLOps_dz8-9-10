@@ -83,7 +83,7 @@ def main():
          '4xx, calls до/после равны', 'Некорректные запросы получали 200 и увеличивали calls',
          'Отсутствовала строгая проверка до генерации', 'service.GenerateRequest; ServiceState.generate; backend.generate')]
     output = io.StringIO(newline='')
-    writer = csv.DictWriter(output, fieldnames=fields)
+    writer = csv.DictWriter(output, fieldnames=fields, lineterminator='\n')
     writer.writeheader()
     for identity, symptom, test, expected, observed, cause, fix in cases:
         writer.writerow(dict(id=identity, symptom=symptom,
@@ -91,7 +91,7 @@ def main():
             expected=expected, observed=observed, root_cause=cause + '; исправление: ' + fix,
             fix_commit=fixed, regression_test=test, before_log='evidence/original-integration.log',
             after_log='evidence/fast-green.log'))
-    (ROOT / 'defects.csv').write_text(output.getvalue(), encoding='utf-8')
+    (ROOT / 'defects.csv').write_text(output.getvalue(), encoding='utf-8', newline='\n')
     lines = ['# ДЗ 8+9+10: процесс выпуска, проверки и API', '',
         '## 1. Условия, версии и расследование', '',
         f'Дата: 01.11.2026. Локальный репозиторий: {ROOT}. Исходный commit: `{initial}`. Commit исправления реализации: `{fixed}`. Удалённый репозиторий для этого задания не создавался.', '',

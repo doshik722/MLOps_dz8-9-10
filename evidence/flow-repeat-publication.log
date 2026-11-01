@@ -1,0 +1,16 @@
+$ flow.py --workspace D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-publication-crash --synthetic
+16:12:39.209 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8688
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:12:45.393 | INFO    | Flow run 'native-kraken' - Beginning flow run 'native-kraken' for flow 'hw8910-release'
+16:12:45.581 | INFO    | Task run 'prepare-data-35d' - Finished in state Cached(type=COMPLETED)
+16:12:45.627 | INFO    | Flow run 'native-kraken' - PREPARATION_STATE Cached 6118742fa62fa46e0dcadf53a282bd80331d0c8695c02b0b97c123ec9754a1be
+16:12:45.655 | INFO    | Task run 'obtain-verified-artifact-c23' - ARTIFACT_VERIFIED fixture-B
+16:12:45.663 | INFO    | Task run 'obtain-verified-artifact-c23' - Finished in state Completed()
+16:12:45.692 | INFO    | Task run 'evaluate-full-gate-bb1' - Finished in state Completed()
+16:12:45.724 | INFO    | Task run 'publish-or-preserve-df0' - Finished in state Completed()
+16:12:45.732 | INFO    | Flow run 'native-kraken' - ATTEMPT {"attempt_id": "6144f0ef-d7c3-4c70-b1be-b09a1f3b7d22", "flow_run_id": "f6464477-d649-403e-a48f-32188814895f", "synthetic": true, "preparation_state": "Cached", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "969514066558ccede1f2042b4f453e770f1ca53e1a41a29d1f330ecec5e86be1", "preparation_key": "6118742fa62fa46e0dcadf53a282bd80331d0c8695c02b0b97c123ec9754a1be"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}, "status": "complete", "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+16:12:46.577 | INFO    | Flow run 'native-kraken' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}
+16:12:46.613 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8688
+
+EXIT_CODE=0

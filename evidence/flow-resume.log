@@ -1,0 +1,16 @@
+$ flow.py --workspace D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-recovery --synthetic
+16:11:24.720 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8666
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:11:30.833 | INFO    | Flow run 'jovial-goose' - Beginning flow run 'jovial-goose' for flow 'hw8910-release'
+16:11:31.036 | INFO    | Task run 'prepare-data-706' - Finished in state Cached(type=COMPLETED)
+16:11:31.062 | INFO    | Flow run 'jovial-goose' - PREPARATION_STATE Cached b4d5783d2b013718cca889b4c291f90c087aa884d299df65ca4effd9ae0c77a3
+16:11:31.090 | INFO    | Task run 'obtain-verified-artifact-2fc' - ARTIFACT_VERIFIED fixture-B
+16:11:31.090 | INFO    | Task run 'obtain-verified-artifact-2fc' - Finished in state Completed()
+16:11:31.124 | INFO    | Task run 'evaluate-full-gate-a4a' - Finished in state Completed()
+16:11:31.169 | INFO    | Task run 'publish-or-preserve-801' - Finished in state Completed()
+16:11:31.172 | INFO    | Flow run 'jovial-goose' - ATTEMPT {"attempt_id": "771c9414-c2b0-47c4-921e-3b49f3b72a2f", "flow_run_id": "82818e95-998e-4f63-955c-92e41989b9da", "synthetic": true, "preparation_state": "Cached", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "50674d326eb2d06cf152ee8376a544eadd9943a86f20998beee83b51ad3369f8", "preparation_key": "b4d5783d2b013718cca889b4c291f90c087aa884d299df65ca4effd9ae0c77a3"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": true}, "status": "complete", "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+16:11:32.024 | INFO    | Flow run 'jovial-goose' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": true}
+16:11:32.048 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8666
+
+EXIT_CODE=0

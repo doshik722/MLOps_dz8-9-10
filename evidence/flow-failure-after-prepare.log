@@ -1,0 +1,57 @@
+$ flow.py --workspace D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-recovery --synthetic --fail-after-prepare
+16:11:12.630 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8856
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:11:18.770 | INFO    | Flow run 'giga-trogon' - Beginning flow run 'giga-trogon' for flow 'hw8910-release'
+16:11:18.957 | INFO    | Task run 'prepare-data-a6f' - PREPARED b4d5783d2b013718cca889b4c291f90c087aa884d299df65ca4effd9ae0c77a3
+16:11:18.960 | INFO    | Task run 'prepare-data-a6f' - Finished in state Completed()
+16:11:18.982 | INFO    | Flow run 'giga-trogon' - PREPARATION_STATE Completed b4d5783d2b013718cca889b4c291f90c087aa884d299df65ca4effd9ae0c77a3
+16:11:18.988 | INFO    | Flow run 'giga-trogon' - ATTEMPT {"attempt_id": "744c43e8-30ee-433f-8282-dabea2232aed", "flow_run_id": "859a8499-bbd6-487c-a909-ace0b469acbe", "synthetic": true, "preparation_state": "Completed", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "50674d326eb2d06cf152ee8376a544eadd9943a86f20998beee83b51ad3369f8", "preparation_key": "b4d5783d2b013718cca889b4c291f90c087aa884d299df65ca4effd9ae0c77a3"}, "status": "failed", "error": "RuntimeError: Инъекция сбоя после подготовки", "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3", "accepted_after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3"}
+16:11:19.927 | ERROR   | Flow run 'giga-trogon' - Encountered exception during execution: RuntimeError('Инъекция сбоя после подготовки')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 107, in release_flow
+    raise RuntimeError('Инъекция сбоя после подготовки')
+RuntimeError: Инъекция сбоя после подготовки
+16:11:19.952 | INFO    | Flow run 'giga-trogon' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Инъекция сбоя после подготовки')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 139, in <module>
+    main()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 132, in main
+    result = release_flow(str(args.workspace), args.synthetic,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flows.py", line 1887, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2290, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2135, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 788, in result
+    raise self._raised
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 107, in release_flow
+    raise RuntimeError('Инъекция сбоя после подготовки')
+RuntimeError: Инъекция сбоя после подготовки
+16:11:19.969 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8856
+
+EXIT_CODE=1

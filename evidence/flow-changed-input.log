@@ -1,0 +1,17 @@
+$ flow.py --workspace D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.lab-release-final-recovery --synthetic
+16:11:49.285 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8063
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:11:55.391 | INFO    | Flow run 'funny-sunfish' - Beginning flow run 'funny-sunfish' for flow 'hw8910-release'
+16:11:55.590 | INFO    | Task run 'prepare-data-7c7' - PREPARED 0dc805ccd9e75478d99c88a64934491b017e7eda2089dac53380cf0930b7dcd5
+16:11:55.591 | INFO    | Task run 'prepare-data-7c7' - Finished in state Completed()
+16:11:55.618 | INFO    | Flow run 'funny-sunfish' - PREPARATION_STATE Completed 0dc805ccd9e75478d99c88a64934491b017e7eda2089dac53380cf0930b7dcd5
+16:11:55.647 | INFO    | Task run 'obtain-verified-artifact-fdf' - ARTIFACT_VERIFIED fixture-B
+16:11:55.650 | INFO    | Task run 'obtain-verified-artifact-fdf' - Finished in state Completed()
+16:11:55.680 | INFO    | Task run 'evaluate-full-gate-3b8' - Finished in state Completed()
+16:11:55.710 | INFO    | Task run 'publish-or-preserve-40b' - Finished in state Completed()
+16:11:55.716 | INFO    | Flow run 'funny-sunfish' - ATTEMPT {"attempt_id": "7f4d54f2-0d56-44a8-a4a7-26ff4d281997", "flow_run_id": "8ce6b8e6-4db6-4e6f-8cf5-c8b0d929568c", "synthetic": true, "preparation_state": "Completed", "preparation": {"data_sha256": "dc92748e7534e063d40419436795755ed4fb02ce691ff10e45b05a20eb482d8c", "rows": 1, "config_sha256": "50674d326eb2d06cf152ee8376a544eadd9943a86f20998beee83b51ad3369f8", "preparation_key": "0dc805ccd9e75478d99c88a64934491b017e7eda2089dac53380cf0930b7dcd5"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}, "status": "complete", "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+16:11:56.560 | INFO    | Flow run 'funny-sunfish' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}
+16:11:56.576 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8063
+
+EXIT_CODE=0
