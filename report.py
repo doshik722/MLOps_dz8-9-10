@@ -54,6 +54,19 @@ def main():
     decision = read(workspace / 'release-report.json')
     provenance = read(workspace / 'hw67/provenance.json')
     video = read(E / 'video.json') if (E / 'video.json').exists() else None
+    swagger = read(E / 'swagger-http.json') if (E / 'swagger-http.json').exists() else None
+    if swagger:
+        assert [item['status'] for item in swagger['requests']] == [200, 200, 200, 422]
+        assert swagger['requests'][1]['response']['model_id'] == accepted['model_id']
+        assert swagger['requests'][2]['response']['runtime_sha256'] == accepted['runtime_sha256']
+    swagger_text = ''
+    if video and video.get('swagger_ui_included'):
+        assert swagger is not None, 'Для браузерной части нужны фактические HTTP-ответы Swagger'
+        swagger_text = (
+            'В браузере показана страница http://127.0.0.1:8091/docs: GET /health и /ready, '
+            'POST /generate с HTTP 200 и отказ HTTP 422 при max_new_tokens=1. '
+            'Фактические запросы и ответы сохранены в evidence/swagger-http.json. '
+        )
     video_text = (
         f'Видео записано {video["recorded_date"]}: `{video["filename"]}`, '
         f'{video["duration_seconds"]:.1f} с, {video["width"]}×{video["height"]}, '
@@ -61,7 +74,7 @@ def main():
         'Слева показаны изменения кода и отчёты в VS Code, справа — реальные команды в отдельном окне терминала. '
         'Во время выполнения проверок переключаются соответствующие файлы. '
         'Показаны сбой и восстановление Prefect, тесты и HTTP API; нагрузочный замер показан по сохранённым журналам. '
-        'Видео прикладывается к сдаче отдельно и не включается в Git.'
+        + swagger_text + 'Видео прикладывается к сдаче отдельно и не включается в Git.'
         if video else
         'Видео 5–8 минут пока не записано; ссылка прикладывается к сдаче отдельно. '
         'В отчёте сохранены проверяемые журналы тяжёлых шагов.'
@@ -186,7 +199,9 @@ def main():
         'synthetic_rollback_observed': rollback['observed_models'], 'real_requests': len(requests),
         'real_errors': sum(row['status'] != 200 for row in requests), 'candidate_rejected': True,
         'accepted_model': accepted['model_id'], 'video_recorded': video is not None,
-        'video_sha256': video['sha256'] if video else None})
+        'video_sha256': video['sha256'] if video else None,
+        'swagger_ui_verified': swagger is not None,
+        'swagger_http_statuses': [item['status'] for item in swagger['requests']] if swagger else []})
     submission = ROOT / 'submission'
     submission.mkdir(exist_ok=True)
     subprocess.run(['git', 'bundle', 'create', str(submission / 'hw8910-history.bundle'), '--all'], cwd=ROOT, check=True)

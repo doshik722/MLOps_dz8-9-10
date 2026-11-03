@@ -1,0 +1,64 @@
+{
+  "source": "Swagger UI",
+  "started_unix_ms": 1793722430296,
+  "duration_seconds": 70,
+  "recorded_frames": 316,
+  "requests": [
+    {
+      "request_id": "14672.19",
+      "url": "http://127.0.0.1:8091/health",
+      "method": "GET",
+      "request_body": null,
+      "status": 200,
+      "response": {
+        "alive": true
+      }
+    },
+    {
+      "request_id": "14672.20",
+      "url": "http://127.0.0.1:8091/ready",
+      "method": "GET",
+      "request_body": null,
+      "status": 200,
+      "response": {
+        "ready": true,
+        "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+        "runtime_sha256": "6193fc50988994594a0c96a18d0990b5a20293d99e935306b850ffcd8459dc7c"
+      }
+    },
+    {
+      "request_id": "14672.21",
+      "url": "http://127.0.0.1:8091/generate",
+      "method": "POST",
+      "request_body": {
+        "prompt": "Сегодня отличный день!",
+        "max_new_tokens": 32
+      },
+      "status": 200,
+      "response": {
+        "answer": "{\"answer\":\"нейтральное\"}",
+        "output_tokens": 8,
+        "text": "{\"answer\":\"нейтральное\"}",
+        "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+        "runtime_sha256": "6193fc50988994594a0c96a18d0990b5a20293d99e935306b850ffcd8459dc7c",
+        "request_id": "3f9e5211-6b16-4975-a6e1-14487845d0f2",
+        "queue_seconds": 0.0000049000082071870565,
+        "generation_seconds": 2.763532699987991,
+        "total_seconds": 2.763537599996198
+      }
+    },
+    {
+      "request_id": "14672.22",
+      "url": "http://127.0.0.1:8091/generate",
+      "method": "POST",
+      "request_body": {
+        "prompt": "Сегодня отличный день!",
+        "max_new_tokens": 1
+      },
+      "status": 422,
+      "response": {
+        "detail": "Для реальной модели допустим только лимит из протокола оценки"
+      }
+    }
+  ]
+}

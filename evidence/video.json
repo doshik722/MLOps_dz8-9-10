@@ -1,18 +1,28 @@
 {
   "recorded_date": "03.11.2026",
-  "filename": "ДЗ 8-9-10 — код и проверки 03-11-2026.mp4",
-  "duration_seconds": 374.93,
+  "filename": "ДЗ 8-9-10 — итоговый отчёт со Swagger 03-11-2026.mp4",
+  "duration_seconds": 444.93,
   "width": 1900,
   "height": 830,
   "fps": 15,
   "audio": false,
-  "bytes": 13471367,
-  "sha256": "ff5ec19671c2c8de9d1db076d1386ed0db1fbff1d766e89f43c75dc8b0dda085",
+  "bytes": 14247454,
+  "sha256": "773aa02b308d4e5bca1b643dd150011b660592a3dde4d0c363c3625d39b3456e",
   "recording_implementation_commit": "2ffcf9b4ea2a203a2c47b8a6b404cfc52f25d9f3",
-  "capture": "FFmpeg gdigrab",
-  "presentation": "VS Code с изменениями кода и отчётами слева, отдельный небольшой терминал справа; файлы переключаются во время расчётов",
+  "swagger_capture_commit": "ed42c96f10111e1f76dd99ca57188784a4a16166",
+  "capture": "FFmpeg gdigrab + browser viewport recording",
+  "presentation": "Изменения кода и отчёты в VS Code, небольшой терминал, отдельный показ Swagger UI перед измерениями",
   "cursor_captured": false,
   "full_decode_check_exit": 0,
-  "supersedes_filename": "ДЗ 8-9-10 — видеоотчёт 03-11-2026.mp4",
-  "supersedes_sha256": "9aa74fbbfaba73e4db2dc2d77d232bed2fdbd18a8946d565c0076530efd7f86c"
+  "swagger_ui_included": true,
+  "swagger_segment_start_seconds": 277,
+  "swagger_segment_duration_seconds": 70,
+  "swagger_http_statuses": [
+    200,
+    200,
+    200,
+    422
+  ],
+  "supersedes_filename": "ДЗ 8-9-10 — код и проверки 03-11-2026.mp4",
+  "supersedes_sha256": "ff5ec19671c2c8de9d1db076d1386ed0db1fbff1d766e89f43c75dc8b0dda085"
 }
