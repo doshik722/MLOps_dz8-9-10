@@ -1,0 +1,13 @@
+17:45:21.887 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8593
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+17:45:28.115 | INFO    | Flow run 'warm-griffin' - Beginning flow run 'warm-griffin' for flow 'hw8910-release'
+17:45:28.324 | INFO    | Task run 'prepare-data-aec' - Finished in state Cached(type=COMPLETED)
+17:45:28.349 | INFO    | Flow run 'warm-griffin' - PREPARATION_STATE Cached 8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf
+17:45:28.380 | INFO    | Task run 'obtain-verified-artifact-054' - ARTIFACT_VERIFIED fixture-B
+17:45:28.383 | INFO    | Task run 'obtain-verified-artifact-054' - Finished in state Completed()
+17:45:28.413 | INFO    | Task run 'evaluate-full-gate-498' - Finished in state Completed()
+17:45:28.461 | INFO    | Task run 'publish-or-preserve-d3c' - Finished in state Completed()
+17:45:28.466 | INFO    | Flow run 'warm-griffin' - ATTEMPT {"attempt_id": "ec07cacb-250d-4e71-87da-968ef29c6617", "flow_run_id": "5f82493d-63d3-4bc6-9a7f-e7707a99d70c", "synthetic": true, "preparation_state": "Cached", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9", "preparation_key": "8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": true}, "status": "complete", "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+17:45:29.297 | INFO    | Flow run 'warm-griffin' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": true}
+17:45:29.327 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8593

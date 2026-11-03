@@ -1,0 +1,14 @@
+17:46:11.975 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8246
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+17:46:18.687 | INFO    | Flow run 'famous-macaque' - Beginning flow run 'famous-macaque' for flow 'hw8910-release'
+17:46:18.892 | INFO    | Task run 'prepare-data-61b' - PREPARED 2c32a879090726f98548064d8ae0899d8345775f10b1b1f994a319d26872b538
+17:46:18.906 | INFO    | Task run 'prepare-data-61b' - Finished in state Completed()
+17:46:18.927 | INFO    | Flow run 'famous-macaque' - PREPARATION_STATE Completed 2c32a879090726f98548064d8ae0899d8345775f10b1b1f994a319d26872b538
+17:46:18.956 | INFO    | Task run 'obtain-verified-artifact-f47' - ARTIFACT_VERIFIED fixture-B
+17:46:18.961 | INFO    | Task run 'obtain-verified-artifact-f47' - Finished in state Completed()
+17:46:18.994 | INFO    | Task run 'evaluate-full-gate-7ac' - Finished in state Completed()
+17:46:19.029 | INFO    | Task run 'publish-or-preserve-d97' - Finished in state Completed()
+17:46:19.036 | INFO    | Flow run 'famous-macaque' - ATTEMPT {"attempt_id": "c74fb661-b474-4cc3-bff3-548b8ff60fe4", "flow_run_id": "2058d31b-9bfe-4b1e-b092-7a59d89431dd", "synthetic": true, "preparation_state": "Completed", "preparation": {"data_sha256": "54ed8a5ce11ea015acf1b41f5eb98ab811a606dd01ddd7385a907f1c45d52fc7", "rows": 3, "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9", "preparation_key": "2c32a879090726f98548064d8ae0899d8345775f10b1b1f994a319d26872b538"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}, "status": "complete", "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+17:46:19.862 | INFO    | Flow run 'famous-macaque' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}
+17:46:19.892 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8246

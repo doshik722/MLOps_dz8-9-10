@@ -1,15 +1,18 @@
 {
   "recorded_date": "03.11.2026",
-  "filename": "ДЗ 8-9-10 — видеоотчёт 03-11-2026.mp4",
-  "duration_seconds": 429.93,
+  "filename": "ДЗ 8-9-10 — код и проверки 03-11-2026.mp4",
+  "duration_seconds": 374.93,
   "width": 1900,
-  "height": 900,
+  "height": 830,
   "fps": 15,
   "audio": false,
-  "bytes": 5334423,
-  "sha256": "9aa74fbbfaba73e4db2dc2d77d232bed2fdbd18a8946d565c0076530efd7f86c",
-  "recording_implementation_commit": "29f5579254d5a52c8ba88a9e212c117ed8fcd332",
+  "bytes": 13471367,
+  "sha256": "ff5ec19671c2c8de9d1db076d1386ed0db1fbff1d766e89f43c75dc8b0dda085",
+  "recording_implementation_commit": "2ffcf9b4ea2a203a2c47b8a6b404cfc52f25d9f3",
   "capture": "FFmpeg gdigrab",
-  "presentation": "Настоящие команды, файлы и HTTP в терминале; нагрузочный замер по сохранённым журналам",
-  "full_decode_check_exit": 0
+  "presentation": "VS Code с изменениями кода и отчётами слева, отдельный небольшой терминал справа; файлы переключаются во время расчётов",
+  "cursor_captured": false,
+  "full_decode_check_exit": 0,
+  "supersedes_filename": "ДЗ 8-9-10 — видеоотчёт 03-11-2026.mp4",
+  "supersedes_sha256": "9aa74fbbfaba73e4db2dc2d77d232bed2fdbd18a8946d565c0076530efd7f86c"
 }

@@ -1,0 +1,46 @@
+$ D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Scripts\python.exe -m compileall -q backend.py bridge.py experiments.py fast_checks.py flow.py lab.py prepare_real.py record_stub.py release.py report.py service.py study.py tests integration_tests
+$ D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Scripts\python.exe -m unittest discover -s tests -v
+test_changed_bytes_at_same_path_invalidate_cache (test_release.ReleaseContractTests.test_changed_bytes_at_same_path_invalidate_cache) ... ok
+test_complete_bound_report_allowed (test_release.ReleaseContractTests.test_complete_bound_report_allowed) ... ok
+test_every_preparation_setting_invalidates_cache (test_release.ReleaseContractTests.test_every_preparation_setting_invalidates_cache) ... ok
+test_failed_atomic_replace_preserves_previous_bytes (test_release.ReleaseContractTests.test_failed_atomic_replace_preserves_previous_bytes) ... ok
+test_incomplete_false_and_truthy_string_rejected (test_release.ReleaseContractTests.test_incomplete_false_and_truthy_string_rejected) ... ok
+test_invalid_digest_and_schema_rejected (test_release.ReleaseContractTests.test_invalid_digest_and_schema_rejected) ... ok
+test_invalid_metric_rejected (test_release.ReleaseContractTests.test_invalid_metric_rejected) ... ok
+test_key_ignores_path_and_mapping_order (test_release.ReleaseContractTests.test_key_ignores_path_and_mapping_order) ... ok
+test_missing_fields_rejected (test_release.ReleaseContractTests.test_missing_fields_rejected) ... ok
+test_publish_and_repeat (test_release.ReleaseContractTests.test_publish_and_repeat) ... ok
+test_rejection_preserves_previous_bytes (test_release.ReleaseContractTests.test_rejection_preserves_previous_bytes) ... ok
+test_report_binding_mismatch_rejected (test_release.ReleaseContractTests.test_report_binding_mismatch_rejected) ... ok
+test_runtime_change_with_stale_hash_rejected (test_release.ReleaseContractTests.test_runtime_change_with_stale_hash_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.050s
+
+OK
+$ D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Scripts\python.exe -m unittest discover -s integration_tests -v
+test_http_invalid_request_never_calls_backend (test_incidents.IncidentTests.test_http_invalid_request_never_calls_backend) ... ok
+test_http_loaded_version_and_rollback (test_incidents.IncidentTests.test_http_loaded_version_and_rollback) ... ok
+test_http_not_ready_before_warmup (test_incidents.IncidentTests.test_http_not_ready_before_warmup) ... ok
+test_subprocess_atomic_replace_failure_preserves_pointer (test_incidents.IncidentTests.test_subprocess_atomic_replace_failure_preserves_pointer) ... ok
+test_subprocess_cache_recovery_and_changed_bytes (test_incidents.IncidentTests.test_subprocess_cache_recovery_and_changed_bytes) ... ok
+test_subprocess_preparation_config_invalidates (test_incidents.IncidentTests.test_subprocess_preparation_config_invalidates) ... ok
+test_subprocess_rejects_incomplete_and_foreign_report (test_incidents.IncidentTests.test_subprocess_rejects_incomplete_and_foreign_report) ... ok
+test_subprocess_repeat_creates_one_publication (test_incidents.IncidentTests.test_subprocess_repeat_creates_one_publication) ... ok
+test_crash_after_pointer_recovers_one_event_in_new_process (test_safety.SafetyTests.test_crash_after_pointer_recovers_one_event_in_new_process) ... ok
+test_failed_fsync_preserves_pointer_and_removes_temp (test_safety.SafetyTests.test_failed_fsync_preserves_pointer_and_removes_temp) ... ok
+test_file_tampering_rejected_before_publication (test_safety.SafetyTests.test_file_tampering_rejected_before_publication) ... ok
+test_nan_and_foreign_report_preserve_pointer (test_safety.SafetyTests.test_nan_and_foreign_report_preserve_pointer) ... ok
+test_release_identity_includes_runtime_and_evaluation (test_safety.SafetyTests.test_release_identity_includes_runtime_and_evaluation) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 11.753s
+
+OK
+Создан синтетический стенд: C:\Users\5956~1\AppData\Local\Temp\tmpww31gyge\workspace
+Создан синтетический стенд: C:\Users\5956~1\AppData\Local\Temp\tmp04my_rmc\workspace
+Создан синтетический стенд: C:\Users\5956~1\AppData\Local\Temp\tmp5lje6jyp\workspace
+Создан синтетический стенд: C:\Users\5956~1\AppData\Local\Temp\tmp7vp_syr5\workspace
+Создан синтетический стенд: C:\Users\5956~1\AppData\Local\Temp\tmpgwkoupuc\workspace
+Отпечаток исходных tests/: 09bd65e6b886
+PASS: компиляция, 13 исходных и 13 новых тестов. Веса не загружались.

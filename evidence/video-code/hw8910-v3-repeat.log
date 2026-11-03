@@ -1,0 +1,13 @@
+17:45:46.518 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8814
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+17:45:52.770 | INFO    | Flow run 'holistic-chital' - Beginning flow run 'holistic-chital' for flow 'hw8910-release'
+17:45:52.935 | INFO    | Task run 'prepare-data-e5f' - Finished in state Cached(type=COMPLETED)
+17:45:52.966 | INFO    | Flow run 'holistic-chital' - PREPARATION_STATE Cached 8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf
+17:45:52.996 | INFO    | Task run 'obtain-verified-artifact-621' - ARTIFACT_VERIFIED fixture-B
+17:45:53.000 | INFO    | Task run 'obtain-verified-artifact-621' - Finished in state Completed()
+17:45:53.031 | INFO    | Task run 'evaluate-full-gate-df1' - Finished in state Completed()
+17:45:53.064 | INFO    | Task run 'publish-or-preserve-dde' - Finished in state Completed()
+17:45:53.071 | INFO    | Flow run 'holistic-chital' - ATTEMPT {"attempt_id": "e8046181-8ec2-428c-9855-6511186fdc6c", "flow_run_id": "20c0eba2-9ed5-4d92-9757-9bb35cfceba7", "synthetic": true, "preparation_state": "Cached", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9", "preparation_key": "8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}, "status": "complete", "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+17:45:53.930 | INFO    | Flow run 'holistic-chital' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": false}
+17:45:53.956 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8814

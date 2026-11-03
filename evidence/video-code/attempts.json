@@ -1,0 +1,78 @@
+[
+  {
+    "accepted_after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+    "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+    "attempt_id": "ca78afdc-20af-43e6-9c97-0d2db62d5717",
+    "error": "RuntimeError: Инъекция сбоя после подготовки",
+    "flow_run_id": "4904936e-39d0-4610-ba76-9e83f2d841d3",
+    "preparation": {
+      "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9",
+      "data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "preparation_key": "8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf",
+      "rows": 2
+    },
+    "preparation_state": "Completed",
+    "status": "failed",
+    "synthetic": true
+  },
+  {
+    "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+    "attempt_id": "ec07cacb-250d-4e71-87da-968ef29c6617",
+    "flow_run_id": "5f82493d-63d3-4bc6-9a7f-e7707a99d70c",
+    "preparation": {
+      "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9",
+      "data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "preparation_key": "8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf",
+      "rows": 2
+    },
+    "preparation_state": "Cached",
+    "result": {
+      "published": true,
+      "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f",
+      "status": "accepted"
+    },
+    "status": "complete",
+    "synthetic": true
+  },
+  {
+    "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "attempt_id": "e8046181-8ec2-428c-9855-6511186fdc6c",
+    "flow_run_id": "20c0eba2-9ed5-4d92-9757-9bb35cfceba7",
+    "preparation": {
+      "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9",
+      "data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "preparation_key": "8421d427cfc12dacb58320b757804a742b96ff8d03e83a30b3268172e7c9d9cf",
+      "rows": 2
+    },
+    "preparation_state": "Cached",
+    "result": {
+      "published": false,
+      "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f",
+      "status": "accepted"
+    },
+    "status": "complete",
+    "synthetic": true
+  },
+  {
+    "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "attempt_id": "c74fb661-b474-4cc3-bff3-548b8ff60fe4",
+    "flow_run_id": "2058d31b-9bfe-4b1e-b092-7a59d89431dd",
+    "preparation": {
+      "config_sha256": "a2a4b7405660d3b003888092f702fc31b3845d786e98c1f23d45e4439f7522f9",
+      "data_sha256": "54ed8a5ce11ea015acf1b41f5eb98ab811a606dd01ddd7385a907f1c45d52fc7",
+      "preparation_key": "2c32a879090726f98548064d8ae0899d8345775f10b1b1f994a319d26872b538",
+      "rows": 3
+    },
+    "preparation_state": "Completed",
+    "result": {
+      "published": false,
+      "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f",
+      "status": "accepted"
+    },
+    "status": "complete",
+    "synthetic": true
+  }
+]
