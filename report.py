@@ -55,11 +55,55 @@ def main():
     provenance = read(workspace / 'hw67/provenance.json')
     video = read(E / 'video.json') if (E / 'video.json').exists() else None
     swagger = read(E / 'swagger-http.json') if (E / 'swagger-http.json').exists() else None
+    readiness = read(E / 'readiness-video.json') if (E / 'readiness-video.json').exists() else None
+    coverage = read(E / 'coverage-live.json') if (E / 'coverage-live.json').exists() else None
+    if readiness:
+        assert readiness['health_before']['status'] == 200
+        assert readiness['ready_before']['status'] == 503
+        during = readiness['during_actual_warmup']
+        assert during['ready']['status'] == 503
+        assert during['debug_before']['body']['calls'] >= 1
+        assert during['debug_before']['body']['warmup_finished'] is False
+        assert readiness['ready_after']['status'] == 200
+        assert readiness['debug_after']['body']['warmup_finished'] is True
+        assert readiness['ready_after']['body']['model_id'] == accepted['model_id']
+        assert readiness['ready_after']['body']['runtime_sha256'] == accepted['runtime_sha256']
+    if coverage:
+        assert coverage['completed'] is True
+        cases_live = coverage['cases']
+        assert cases_live['config']['key_before'] != cases_live['config']['key_after']
+        assert all(item['before'] == item['after'] for item in cases_live['reports'])
+        assert cases_live['atomic']['before'] == cases_live['atomic']['after']
+        assert cases_live['atomic']['remaining_temp_files'] == 0
+        assert cases_live['publication_recovery']['events'] == 1
+        assert cases_live['publication_recovery']['pending'] is False
+        assert [item['response']['model_id'] for item in cases_live['loaded_version']] == [
+            'fixture-A', 'fixture-A', 'fixture-B', 'fixture-A']
+        invalid_live = cases_live['invalid_requests']
+        assert len(invalid_live) == 8
+        assert all(item['status'] == 422 and item['before_calls'] == item['after_calls']
+                   for item in invalid_live[:-1])
+        assert invalid_live[-1]['status'] == 200
+        assert invalid_live[-1]['after_calls'] == invalid_live[-1]['before_calls'] + 1
     if swagger:
         assert [item['status'] for item in swagger['requests']] == [200, 200, 200, 422]
         assert swagger['requests'][1]['response']['model_id'] == accepted['model_id']
         assert swagger['requests'][2]['response']['runtime_sha256'] == accepted['runtime_sha256']
     swagger_text = ''
+    extra_video_text = ''
+    if video and video.get('readiness_transition_included'):
+        assert readiness is not None and coverage is not None
+        extra_video_text = (
+            'Дополнительно в кадре выполнены независимые прогоны: изменение config при прежнем входе, '
+            'отказ неполному и чужому отчётам, внесённый отказ os.replace с сохранением SHA, '
+            'восстановление после сбоя между указателем и журналом без дубликата, '
+            'HTTP-последовательность A → A → B → A и семь HTTP 422 с неизменным счётчиком backend. '
+            'Эти инженерные опыты явно помечены STUB ONLY; факты сохранены в evidence/coverage-live.json. '
+            'На реальном Qwen API отдельно показан переход /ready: 503 → 200, в том числе 503 '
+            'во время фактического вызова прогрева. Запуск включает существующую паузу 5 с перед '
+            'прогревом; она не считается вычислением модели. Часть ожидания вырезана, о чём есть '
+            'подпись в кадре. HTTP-ответы и состояния сохранены в evidence/readiness-video.json. '
+        )
     if video and video.get('swagger_ui_included'):
         assert swagger is not None, 'Для браузерной части нужны фактические HTTP-ответы Swagger'
         swagger_text = (
@@ -74,7 +118,7 @@ def main():
         'Слева показаны изменения кода и отчёты в VS Code, справа — реальные команды в отдельном окне терминала. '
         'Во время выполнения проверок переключаются соответствующие файлы. '
         'Показаны сбой и восстановление Prefect, тесты и HTTP API; нагрузочный замер показан по сохранённым журналам. '
-        + swagger_text + 'Видео прикладывается к сдаче отдельно и не включается в Git.'
+        + swagger_text + extra_video_text + 'Видео прикладывается к сдаче отдельно и не включается в Git.'
         if video else
         'Видео 5–8 минут пока не записано; ссылка прикладывается к сдаче отдельно. '
         'В отчёте сохранены проверяемые журналы тяжёлых шагов.'
@@ -201,6 +245,8 @@ def main():
         'accepted_model': accepted['model_id'], 'video_recorded': video is not None,
         'video_sha256': video['sha256'] if video else None,
         'swagger_ui_verified': swagger is not None,
+        'readiness_transition_verified': readiness is not None,
+        'independent_live_cases_verified': coverage is not None,
         'swagger_http_statuses': [item['status'] for item in swagger['requests']] if swagger else []})
     submission = ROOT / 'submission'
     submission.mkdir(exist_ok=True)

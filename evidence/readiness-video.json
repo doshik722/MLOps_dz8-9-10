@@ -1,0 +1,5799 @@
+{
+  "source": "real Qwen API restart and Swagger UI",
+  "command": [
+    "D:/downloads_programs/Git_hub_progr/Labs_MLops/hw8910-broken/.venv/Scripts/python.exe",
+    "-u",
+    "service.py",
+    "--workspace",
+    ".lab-real",
+    "--backend",
+    "real",
+    "--port",
+    "8091",
+    "--warmup-seconds",
+    "5",
+    "--debug"
+  ],
+  "server_launcher_pid": 16592,
+  "pre_warmup_delay_seconds": 5,
+  "started_unix_ms": 1793728856041,
+  "duration_seconds": 32.738431500000004,
+  "ready_at_seconds": 24.670075500000006,
+  "health_before": {
+    "status": 200,
+    "body": {
+      "alive": true
+    },
+    "at_unix_ms": 1793728854788
+  },
+  "ready_before": {
+    "status": 503,
+    "body": {
+      "detail": "Модель ещё не готова"
+    },
+    "at_unix_ms": 1793728854791
+  },
+  "debug_before": {
+    "status": 200,
+    "body": {
+      "loaded_id": null,
+      "calls": 0,
+      "warmup_finished": false
+    },
+    "at_unix_ms": 1793728854795
+  },
+  "during_actual_warmup": {
+    "elapsed_seconds": 22.233557100000006,
+    "ready": {
+      "status": 503,
+      "body": {
+        "detail": "Модель ещё не готова"
+      },
+      "at_unix_ms": 1793728878273
+    },
+    "debug_before": {
+      "status": 200,
+      "body": {
+        "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+        "calls": 1,
+        "warmup_finished": false
+      },
+      "at_unix_ms": 1793728878272
+    },
+    "debug_after": {
+      "status": 200,
+      "body": {
+        "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+        "calls": 1,
+        "warmup_finished": false
+      },
+      "at_unix_ms": 1793728878275
+    }
+  },
+  "ready_after": {
+    "status": 200,
+    "body": {
+      "ready": true,
+      "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+      "runtime_sha256": "6193fc50988994594a0c96a18d0990b5a20293d99e935306b850ffcd8459dc7c"
+    },
+    "at_unix_ms": 1793728880528
+  },
+  "debug_after": {
+    "status": 200,
+    "body": {
+      "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+      "calls": 1,
+      "warmup_finished": true
+    },
+    "at_unix_ms": 1793728880529
+  },
+  "ui_responses": [
+    {
+      "request_id": "6452.18",
+      "status": 503,
+      "at_unix_ms": 1793728878294,
+      "body": {
+        "detail": "Модель ещё не готова"
+      }
+    },
+    {
+      "request_id": "6452.19",
+      "status": 200,
+      "at_unix_ms": 1793728880559,
+      "body": {
+        "ready": true,
+        "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+        "runtime_sha256": "6193fc50988994594a0c96a18d0990b5a20293d99e935306b850ffcd8459dc7c"
+      }
+    }
+  ],
+  "probes": [
+    {
+      "elapsed_seconds": 0.0122245000000039,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856052
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856049
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856054
+      }
+    },
+    {
+      "elapsed_seconds": 0.1290763999999981,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856169
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856168
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856171
+      }
+    },
+    {
+      "elapsed_seconds": 0.2408047000000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856280
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856277
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856282
+      }
+    },
+    {
+      "elapsed_seconds": 0.3691667999999991,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856409
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856404
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856411
+      }
+    },
+    {
+      "elapsed_seconds": 0.4890578000000023,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856529
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856527
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856531
+      }
+    },
+    {
+      "elapsed_seconds": 0.5972695999999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856637
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856636
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856639
+      }
+    },
+    {
+      "elapsed_seconds": 0.710341800000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856750
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856749
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856752
+      }
+    },
+    {
+      "elapsed_seconds": 0.8143467000000019,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856855
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856854
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856856
+      }
+    },
+    {
+      "elapsed_seconds": 0.9304072000000014,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728856970
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856969
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728856972
+      }
+    },
+    {
+      "elapsed_seconds": 1.0489824999999982,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857089
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857087
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857090
+      }
+    },
+    {
+      "elapsed_seconds": 1.1603636000000042,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857200
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857198
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857202
+      }
+    },
+    {
+      "elapsed_seconds": 1.2664000000000015,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857307
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857305
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857308
+      }
+    },
+    {
+      "elapsed_seconds": 1.378845300000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857419
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857417
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857420
+      }
+    },
+    {
+      "elapsed_seconds": 1.570402399999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857598
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857585
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857612
+      }
+    },
+    {
+      "elapsed_seconds": 1.7782444000000033,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857818
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857791
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857820
+      }
+    },
+    {
+      "elapsed_seconds": 1.8925800000000017,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728857933
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857931
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728857934
+      }
+    },
+    {
+      "elapsed_seconds": 2.001707699999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858042
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858040
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858043
+      }
+    },
+    {
+      "elapsed_seconds": 2.111608100000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858152
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858150
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858153
+      }
+    },
+    {
+      "elapsed_seconds": 2.220724900000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858261
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858260
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858262
+      }
+    },
+    {
+      "elapsed_seconds": 2.3304578000000036,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858371
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858370
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858372
+      }
+    },
+    {
+      "elapsed_seconds": 2.443821600000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858484
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858482
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858485
+      }
+    },
+    {
+      "elapsed_seconds": 2.549564900000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858590
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858588
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858591
+      }
+    },
+    {
+      "elapsed_seconds": 2.658763500000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858699
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858697
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858700
+      }
+    },
+    {
+      "elapsed_seconds": 2.7655697,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858806
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858805
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858807
+      }
+    },
+    {
+      "elapsed_seconds": 2.8789003999999987,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728858919
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858917
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728858920
+      }
+    },
+    {
+      "elapsed_seconds": 2.9865054000000018,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859026
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859025
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859028
+      }
+    },
+    {
+      "elapsed_seconds": 3.096464200000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859136
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859135
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859138
+      }
+    },
+    {
+      "elapsed_seconds": 3.204019,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859244
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859243
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859245
+      }
+    },
+    {
+      "elapsed_seconds": 3.3168378999999986,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859357
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859355
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859358
+      }
+    },
+    {
+      "elapsed_seconds": 3.4264343999999984,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859466
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859465
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859468
+      }
+    },
+    {
+      "elapsed_seconds": 3.5358727,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859576
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859575
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859577
+      }
+    },
+    {
+      "elapsed_seconds": 3.6452692000000027,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859685
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859684
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859686
+      }
+    },
+    {
+      "elapsed_seconds": 3.7558559999999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859795
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859793
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859797
+      }
+    },
+    {
+      "elapsed_seconds": 3.8616837000000013,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728859901
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859899
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728859903
+      }
+    },
+    {
+      "elapsed_seconds": 3.9720901000000013,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860011
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860009
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860013
+      }
+    },
+    {
+      "elapsed_seconds": 4.0788004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860118
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860116
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860120
+      }
+    },
+    {
+      "elapsed_seconds": 4.189496200000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860229
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860227
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860231
+      }
+    },
+    {
+      "elapsed_seconds": 4.301873200000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860340
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860336
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860343
+      }
+    },
+    {
+      "elapsed_seconds": 4.4105115,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860450
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860448
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860452
+      }
+    },
+    {
+      "elapsed_seconds": 4.517948000000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860557
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860554
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860559
+      }
+    },
+    {
+      "elapsed_seconds": 4.628289100000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860667
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860665
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860670
+      }
+    },
+    {
+      "elapsed_seconds": 4.7412212,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860779
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860776
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860782
+      }
+    },
+    {
+      "elapsed_seconds": 4.862356100000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728860902
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860900
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728860904
+      }
+    },
+    {
+      "elapsed_seconds": 4.969715600000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861010
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861009
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861011
+      }
+    },
+    {
+      "elapsed_seconds": 5.080217600000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861120
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861118
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861121
+      }
+    },
+    {
+      "elapsed_seconds": 5.188015100000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861228
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861227
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861229
+      }
+    },
+    {
+      "elapsed_seconds": 5.3008029000000025,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861340
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861338
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861342
+      }
+    },
+    {
+      "elapsed_seconds": 5.411306300000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861451
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861449
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861453
+      }
+    },
+    {
+      "elapsed_seconds": 5.522052499999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861561
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861558
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861563
+      }
+    },
+    {
+      "elapsed_seconds": 5.631111499999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861668
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861665
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861672
+      }
+    },
+    {
+      "elapsed_seconds": 5.753557500000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861793
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861791
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861795
+      }
+    },
+    {
+      "elapsed_seconds": 5.864533100000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728861903
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861901
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728861906
+      }
+    },
+    {
+      "elapsed_seconds": 5.973323700000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862013
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862012
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862015
+      }
+    },
+    {
+      "elapsed_seconds": 6.0921051,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862132
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862131
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862133
+      }
+    },
+    {
+      "elapsed_seconds": 6.212273800000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862250
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862242
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862253
+      }
+    },
+    {
+      "elapsed_seconds": 6.329097600000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862369
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862366
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862370
+      }
+    },
+    {
+      "elapsed_seconds": 6.4344833,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862475
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862473
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862476
+      }
+    },
+    {
+      "elapsed_seconds": 6.550758600000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862588
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862586
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862592
+      }
+    },
+    {
+      "elapsed_seconds": 6.673350100000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862712
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862710
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862715
+      }
+    },
+    {
+      "elapsed_seconds": 6.782714899999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862822
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862819
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862824
+      }
+    },
+    {
+      "elapsed_seconds": 6.893889000000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728862932
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862930
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728862935
+      }
+    },
+    {
+      "elapsed_seconds": 7.002900000000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863041
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863040
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863044
+      }
+    },
+    {
+      "elapsed_seconds": 7.112703300000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863153
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863149
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863154
+      }
+    },
+    {
+      "elapsed_seconds": 7.2192216000000045,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863259
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863257
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863260
+      }
+    },
+    {
+      "elapsed_seconds": 7.326808100000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863367
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863365
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863368
+      }
+    },
+    {
+      "elapsed_seconds": 7.439534599999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863479
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863477
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863481
+      }
+    },
+    {
+      "elapsed_seconds": 7.547515899999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863588
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863586
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863589
+      }
+    },
+    {
+      "elapsed_seconds": 7.660130100000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863700
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863697
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863701
+      }
+    },
+    {
+      "elapsed_seconds": 7.771695700000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863810
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863807
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863813
+      }
+    },
+    {
+      "elapsed_seconds": 7.894099000000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728863934
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863932
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728863935
+      }
+    },
+    {
+      "elapsed_seconds": 8.000805800000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864041
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864039
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864042
+      }
+    },
+    {
+      "elapsed_seconds": 8.112421100000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864152
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864149
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864154
+      }
+    },
+    {
+      "elapsed_seconds": 8.220578399999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864261
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864259
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864262
+      }
+    },
+    {
+      "elapsed_seconds": 8.331638000000007,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864372
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864371
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864373
+      }
+    },
+    {
+      "elapsed_seconds": 8.444086800000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864482
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864480
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864485
+      }
+    },
+    {
+      "elapsed_seconds": 8.563702300000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864593
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864590
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864605
+      }
+    },
+    {
+      "elapsed_seconds": 8.675580000000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864716
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864713
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864717
+      }
+    },
+    {
+      "elapsed_seconds": 8.793998000000007,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864832
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864824
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864835
+      }
+    },
+    {
+      "elapsed_seconds": 8.913463600000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728864952
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864950
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728864955
+      }
+    },
+    {
+      "elapsed_seconds": 9.023162599999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865061
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865058
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865064
+      }
+    },
+    {
+      "elapsed_seconds": 9.133156000000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865172
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865170
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865174
+      }
+    },
+    {
+      "elapsed_seconds": 9.293085399999997,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865331
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865327
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865334
+      }
+    },
+    {
+      "elapsed_seconds": 9.414182199999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865453
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865449
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865455
+      }
+    },
+    {
+      "elapsed_seconds": 9.544774000000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865578
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865575
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865586
+      }
+    },
+    {
+      "elapsed_seconds": 9.672627500000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865703
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865698
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865714
+      }
+    },
+    {
+      "elapsed_seconds": 9.785548800000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865823
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865822
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865827
+      }
+    },
+    {
+      "elapsed_seconds": 9.890732799999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728865931
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865929
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728865932
+      }
+    },
+    {
+      "elapsed_seconds": 10.003766499999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866042
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866040
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866045
+      }
+    },
+    {
+      "elapsed_seconds": 10.113812699999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866153
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866151
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866155
+      }
+    },
+    {
+      "elapsed_seconds": 10.227270799999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866266
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866261
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866268
+      }
+    },
+    {
+      "elapsed_seconds": 10.347825100000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866387
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866385
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866389
+      }
+    },
+    {
+      "elapsed_seconds": 10.453802500000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866494
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866492
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866495
+      }
+    },
+    {
+      "elapsed_seconds": 10.566394499999994,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866605
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866603
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866608
+      }
+    },
+    {
+      "elapsed_seconds": 10.716337,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866714
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866712
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866758
+      }
+    },
+    {
+      "elapsed_seconds": 10.831455600000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866871
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866870
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866873
+      }
+    },
+    {
+      "elapsed_seconds": 10.940829100000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728866981
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866979
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728866982
+      }
+    },
+    {
+      "elapsed_seconds": 11.108072499999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867148
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867146
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867149
+      }
+    },
+    {
+      "elapsed_seconds": 11.226672000000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867261
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867259
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867268
+      }
+    },
+    {
+      "elapsed_seconds": 11.334843399999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867374
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867371
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867376
+      }
+    },
+    {
+      "elapsed_seconds": 11.442990999999994,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867482
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867479
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867484
+      }
+    },
+    {
+      "elapsed_seconds": 11.547840100000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867588
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867586
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867589
+      }
+    },
+    {
+      "elapsed_seconds": 11.657728000000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867698
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867697
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867699
+      }
+    },
+    {
+      "elapsed_seconds": 11.768517900000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867808
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867806
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867810
+      }
+    },
+    {
+      "elapsed_seconds": 11.889350900000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728867917
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867916
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728867931
+      }
+    },
+    {
+      "elapsed_seconds": 12.003343200000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868043
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868041
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868045
+      }
+    },
+    {
+      "elapsed_seconds": 12.113552299999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868153
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868151
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868155
+      }
+    },
+    {
+      "elapsed_seconds": 12.233870500000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868272
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868267
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868275
+      }
+    },
+    {
+      "elapsed_seconds": 12.344238299999997,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868384
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868382
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868385
+      }
+    },
+    {
+      "elapsed_seconds": 12.454258700000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868495
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868493
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868495
+      }
+    },
+    {
+      "elapsed_seconds": 12.563764299999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868604
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868602
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868605
+      }
+    },
+    {
+      "elapsed_seconds": 12.673896300000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868713
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868710
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868715
+      }
+    },
+    {
+      "elapsed_seconds": 12.779990099999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868819
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868817
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868821
+      }
+    },
+    {
+      "elapsed_seconds": 12.887392699999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728868928
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868926
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728868929
+      }
+    },
+    {
+      "elapsed_seconds": 12.996097099999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869036
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869035
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869037
+      }
+    },
+    {
+      "elapsed_seconds": 13.106974799999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869147
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869146
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869148
+      }
+    },
+    {
+      "elapsed_seconds": 13.216859500000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869256
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869255
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869258
+      }
+    },
+    {
+      "elapsed_seconds": 13.325285799999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869365
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869364
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869367
+      }
+    },
+    {
+      "elapsed_seconds": 13.432328999999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869472
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869471
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869474
+      }
+    },
+    {
+      "elapsed_seconds": 13.543451300000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869584
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869583
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869585
+      }
+    },
+    {
+      "elapsed_seconds": 13.655851800000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869695
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869693
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869697
+      }
+    },
+    {
+      "elapsed_seconds": 13.769642600000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869808
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869806
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869811
+      }
+    },
+    {
+      "elapsed_seconds": 13.8773741,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728869917
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869916
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728869919
+      }
+    },
+    {
+      "elapsed_seconds": 13.986451400000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728870027
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870026
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870028
+      }
+    },
+    {
+      "elapsed_seconds": 14.101755600000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728870140
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870136
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870143
+      }
+    },
+    {
+      "elapsed_seconds": 14.624059900000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728870664
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870662
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870665
+      }
+    },
+    {
+      "elapsed_seconds": 14.744881800000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728870783
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870779
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870786
+      }
+    },
+    {
+      "elapsed_seconds": 14.863293699999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728870904
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870903
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728870905
+      }
+    },
+    {
+      "elapsed_seconds": 14.979134399999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728871018
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871013
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871020
+      }
+    },
+    {
+      "elapsed_seconds": 15.088333899999999,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728871128
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871125
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871130
+      }
+    },
+    {
+      "elapsed_seconds": 15.257049100000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728871296
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871292
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871298
+      }
+    },
+    {
+      "elapsed_seconds": 15.828785100000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728871830
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871722
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728871870
+      }
+    },
+    {
+      "elapsed_seconds": 16.045161000000007,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728872061
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872045
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872086
+      }
+    },
+    {
+      "elapsed_seconds": 16.2090463,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728872238
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872215
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872250
+      }
+    },
+    {
+      "elapsed_seconds": 16.372543699999994,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728872395
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872372
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872414
+      }
+    },
+    {
+      "elapsed_seconds": 16.5384378,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728872567
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872540
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872580
+      }
+    },
+    {
+      "elapsed_seconds": 16.7292077,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728872747
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872712
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872770
+      }
+    },
+    {
+      "elapsed_seconds": 16.891122300000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728872925
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872903
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728872932
+      }
+    },
+    {
+      "elapsed_seconds": 16.9973257,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873037
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873036
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": null,
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873039
+      }
+    },
+    {
+      "elapsed_seconds": 17.105261200000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873145
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873144
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873146
+      }
+    },
+    {
+      "elapsed_seconds": 17.213234200000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873254
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873253
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873254
+      }
+    },
+    {
+      "elapsed_seconds": 17.324285900000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873365
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873364
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873366
+      }
+    },
+    {
+      "elapsed_seconds": 17.439034100000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873478
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873475
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873480
+      }
+    },
+    {
+      "elapsed_seconds": 17.549833,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873588
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873586
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873591
+      }
+    },
+    {
+      "elapsed_seconds": 17.668927800000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873709
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873708
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873710
+      }
+    },
+    {
+      "elapsed_seconds": 17.781726299999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873821
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873818
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873823
+      }
+    },
+    {
+      "elapsed_seconds": 17.8910178,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728873929
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873927
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728873932
+      }
+    },
+    {
+      "elapsed_seconds": 18.015354600000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874054
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874051
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874057
+      }
+    },
+    {
+      "elapsed_seconds": 18.122265800000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874162
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874160
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874163
+      }
+    },
+    {
+      "elapsed_seconds": 18.225964300000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874266
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874265
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874267
+      }
+    },
+    {
+      "elapsed_seconds": 18.33754430000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874376
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874374
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874379
+      }
+    },
+    {
+      "elapsed_seconds": 18.4486654,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874487
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874485
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874490
+      }
+    },
+    {
+      "elapsed_seconds": 18.556798800000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874596
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874593
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874598
+      }
+    },
+    {
+      "elapsed_seconds": 18.6784096,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874719
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874716
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874720
+      }
+    },
+    {
+      "elapsed_seconds": 18.787427200000007,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874828
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874825
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874829
+      }
+    },
+    {
+      "elapsed_seconds": 18.895903399999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728874935
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874932
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728874937
+      }
+    },
+    {
+      "elapsed_seconds": 19.0187383,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875058
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875055
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875060
+      }
+    },
+    {
+      "elapsed_seconds": 19.1417941,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875180
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875178
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875183
+      }
+    },
+    {
+      "elapsed_seconds": 19.251451799999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875290
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875287
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875293
+      }
+    },
+    {
+      "elapsed_seconds": 19.360884900000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875399
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875397
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875402
+      }
+    },
+    {
+      "elapsed_seconds": 19.469705400000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875508
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875506
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875511
+      }
+    },
+    {
+      "elapsed_seconds": 19.590096699999993,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875630
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875628
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875631
+      }
+    },
+    {
+      "elapsed_seconds": 19.701769700000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875740
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875738
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875743
+      }
+    },
+    {
+      "elapsed_seconds": 19.810823499999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875849
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875847
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875852
+      }
+    },
+    {
+      "elapsed_seconds": 19.92230960000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728875960
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875957
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728875964
+      }
+    },
+    {
+      "elapsed_seconds": 20.046674700000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876084
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876081
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876088
+      }
+    },
+    {
+      "elapsed_seconds": 20.1680227,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876207
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876204
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876209
+      }
+    },
+    {
+      "elapsed_seconds": 20.2826247,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876321
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876317
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876324
+      }
+    },
+    {
+      "elapsed_seconds": 20.4040895,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876443
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876439
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876445
+      }
+    },
+    {
+      "elapsed_seconds": 20.517877099999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876554
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876549
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876559
+      }
+    },
+    {
+      "elapsed_seconds": 20.640031300000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876678
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876675
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876681
+      }
+    },
+    {
+      "elapsed_seconds": 20.7629544,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876801
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876798
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876804
+      }
+    },
+    {
+      "elapsed_seconds": 20.885849499999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728876925
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876922
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728876927
+      }
+    },
+    {
+      "elapsed_seconds": 21.008368499999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877047
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877045
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877050
+      }
+    },
+    {
+      "elapsed_seconds": 21.11974130000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877159
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877156
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877161
+      }
+    },
+    {
+      "elapsed_seconds": 21.242316099999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877281
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877278
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877284
+      }
+    },
+    {
+      "elapsed_seconds": 21.349995200000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877389
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877387
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877391
+      }
+    },
+    {
+      "elapsed_seconds": 21.46039,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877499
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877496
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877502
+      }
+    },
+    {
+      "elapsed_seconds": 21.570056400000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877609
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877606
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877611
+      }
+    },
+    {
+      "elapsed_seconds": 21.679317599999994,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877718
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877715
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877721
+      }
+    },
+    {
+      "elapsed_seconds": 21.787843999999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877827
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877824
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877829
+      }
+    },
+    {
+      "elapsed_seconds": 21.893870500000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728877934
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877932
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728877935
+      }
+    },
+    {
+      "elapsed_seconds": 22.004148499999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878043
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878040
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878045
+      }
+    },
+    {
+      "elapsed_seconds": 22.118733900000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878159
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878158
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 0,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878160
+      }
+    },
+    {
+      "elapsed_seconds": 22.233557100000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878273
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878272
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878275
+      }
+    },
+    {
+      "elapsed_seconds": 22.513957500000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878554
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878552
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878555
+      }
+    },
+    {
+      "elapsed_seconds": 22.625414499999998,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878665
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878664
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878667
+      }
+    },
+    {
+      "elapsed_seconds": 22.732206699999995,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878772
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878771
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878773
+      }
+    },
+    {
+      "elapsed_seconds": 22.844175900000003,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878883
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878882
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878885
+      }
+    },
+    {
+      "elapsed_seconds": 22.951776400000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728878992
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878990
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728878993
+      }
+    },
+    {
+      "elapsed_seconds": 23.063293600000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879103
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879101
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879105
+      }
+    },
+    {
+      "elapsed_seconds": 23.172877800000002,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879212
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879210
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879214
+      }
+    },
+    {
+      "elapsed_seconds": 23.280601599999994,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879321
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879320
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879322
+      }
+    },
+    {
+      "elapsed_seconds": 23.3912874,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879431
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879430
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879433
+      }
+    },
+    {
+      "elapsed_seconds": 23.500664000000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879541
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879538
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879542
+      }
+    },
+    {
+      "elapsed_seconds": 23.61351120000001,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879654
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879651
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879655
+      }
+    },
+    {
+      "elapsed_seconds": 23.720869600000004,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879761
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879759
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879762
+      }
+    },
+    {
+      "elapsed_seconds": 23.8298532,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879870
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879867
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879871
+      }
+    },
+    {
+      "elapsed_seconds": 23.939881099999997,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728879980
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879978
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728879981
+      }
+    },
+    {
+      "elapsed_seconds": 24.048694199999996,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728880089
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880088
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880090
+      }
+    },
+    {
+      "elapsed_seconds": 24.161718000000008,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728880201
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880198
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880203
+      }
+    },
+    {
+      "elapsed_seconds": 24.273402100000006,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728880312
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880310
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880315
+      }
+    },
+    {
+      "elapsed_seconds": 24.381083100000005,
+      "ready": {
+        "status": 503,
+        "body": {
+          "detail": "Модель ещё не готова"
+        },
+        "at_unix_ms": 1793728880421
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880418
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": false
+        },
+        "at_unix_ms": 1793728880422
+      }
+    },
+    {
+      "elapsed_seconds": 24.488010500000005,
+      "ready": {
+        "status": 200,
+        "body": {
+          "ready": true,
+          "model_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "runtime_sha256": "6193fc50988994594a0c96a18d0990b5a20293d99e935306b850ffcd8459dc7c"
+        },
+        "at_unix_ms": 1793728880528
+      },
+      "debug_before": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": true
+        },
+        "at_unix_ms": 1793728880526
+      },
+      "debug_after": {
+        "status": 200,
+        "body": {
+          "loaded_id": "Qwen/Qwen3-0.6B@c1899de289a04d12100db370d81485cdf75e47ca",
+          "calls": 1,
+          "warmup_finished": true
+        },
+        "at_unix_ms": 1793728880529
+      }
+    }
+  ]
+}

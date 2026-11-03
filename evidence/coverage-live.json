@@ -1,0 +1,293 @@
+{
+  "source": "STUB ONLY; real files, subprocess and localhost HTTP",
+  "cases": {
+    "config": {
+      "input_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "key_before": "0dd09272a795557fa06139596d9ec23c3530c4da8794eb97d4d6ee3620ba62e8",
+      "key_after": "ed6d9077c7068ba24fe91bd6ffecf75b5a1c3e70fb1ce6c331c519518485203c",
+      "stdout": "PREPARED 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\n"
+    },
+    "reports": [
+      {
+        "report": "report-incomplete.json",
+        "before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+        "after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+        "reason": "Неполная оценка или кандидат отклонён"
+      },
+      {
+        "report": "report-A.json",
+        "before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+        "after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+        "reason": "Отчёт не связан с manifest: model_id"
+      }
+    ],
+    "atomic": {
+      "error": "injected atomic replace failure",
+      "before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+      "after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+      "remaining_temp_files": 0
+    },
+    "publication_recovery": {
+      "failed": {
+        "exit_code": 1,
+        "stdout": "PREPARED 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\n",
+        "stderr": "Traceback (most recent call last):\n  File \"D:\\downloads_programs\\Git_hub_progr\\Labs_MLops\\hw8910-broken\\lab.py\", line 92, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"D:\\downloads_programs\\Git_hub_progr\\Labs_MLops\\hw8910-broken\\lab.py\", line 89, in main\n    else:run(args.workspace,args.report,args.fail_after_prepare,args.fail_after_publish)\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\downloads_programs\\Git_hub_progr\\Labs_MLops\\hw8910-broken\\lab.py\", line 72, in run\n    result=release.journaled_publish(manifest,report,root,fail_after_publish)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\downloads_programs\\Git_hub_progr\\Labs_MLops\\hw8910-broken\\release.py\", line 150, in journaled_publish\n    raise RuntimeError('Инъекция сбоя между accepted.json и журналом')\nRuntimeError: Инъекция сбоя между accepted.json и журналом\n"
+      },
+      "recovered": {
+        "exit_code": 0,
+        "stdout": "CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nUNCHANGED fixture-B 935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f\n",
+        "stderr": ""
+      },
+      "repeated": {
+        "exit_code": 0,
+        "stdout": "CACHE_HIT 19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac\nUNCHANGED fixture-B 935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f\n",
+        "stderr": ""
+      },
+      "events": 1,
+      "pending": false
+    },
+    "loaded_version": [
+      {
+        "url": "http://127.0.0.1:49932/generate",
+        "pointer": "fixture-A",
+        "status": 200,
+        "response": {
+          "answer": "STUB ONLY: fixture-A",
+          "output_tokens": 1,
+          "text": "STUB ONLY: fixture-A",
+          "model_id": "fixture-A",
+          "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+          "request_id": "40e5c80d-ac30-4107-bdcf-36e47f7a41cd",
+          "queue_seconds": 3.1999952625483274e-06,
+          "generation_seconds": 0.010496400005649775,
+          "total_seconds": 0.010499600000912324
+        }
+      },
+      {
+        "url": "http://127.0.0.1:49932/generate",
+        "pointer": "fixture-B",
+        "status": 200,
+        "response": {
+          "answer": "STUB ONLY: fixture-A",
+          "output_tokens": 1,
+          "text": "STUB ONLY: fixture-A",
+          "model_id": "fixture-A",
+          "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+          "request_id": "9b74ca5c-1631-44c2-9e13-3585c184d93b",
+          "queue_seconds": 4.399975296109915e-06,
+          "generation_seconds": 0.010330400022212416,
+          "total_seconds": 0.010334799997508526
+        }
+      },
+      {
+        "url": "http://127.0.0.1:49943/generate",
+        "pointer": "fixture-B",
+        "status": 200,
+        "response": {
+          "answer": "STUB ONLY: fixture-B",
+          "output_tokens": 1,
+          "text": "STUB ONLY: fixture-B",
+          "model_id": "fixture-B",
+          "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+          "request_id": "3a246db7-5b7e-4b03-b432-d07557507f19",
+          "queue_seconds": 5.900015821680427e-06,
+          "generation_seconds": 0.010321799985831603,
+          "total_seconds": 0.010327700001653284
+        }
+      },
+      {
+        "url": "http://127.0.0.1:49949/generate",
+        "pointer": "fixture-A",
+        "status": 200,
+        "response": {
+          "answer": "STUB ONLY: fixture-A",
+          "output_tokens": 1,
+          "text": "STUB ONLY: fixture-A",
+          "model_id": "fixture-A",
+          "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+          "request_id": "d8f2e921-d0de-4fae-a571-05947023198f",
+          "queue_seconds": 2.00001522898674e-06,
+          "generation_seconds": 0.01040100000682287,
+          "total_seconds": 0.010403000022051856
+        }
+      }
+    ],
+    "invalid_requests": [
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 0,
+        "max_new_tokens": 32,
+        "response": {
+          "detail": [
+            {
+              "type": "string_too_short",
+              "loc": [
+                "body",
+                "prompt"
+              ],
+              "msg": "String should have at least 1 character",
+              "input": "",
+              "ctx": {
+                "min_length": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 1,
+        "max_new_tokens": 0,
+        "response": {
+          "detail": [
+            {
+              "type": "greater_than_equal",
+              "loc": [
+                "body",
+                "max_new_tokens"
+              ],
+              "msg": "Input should be greater than or equal to 1",
+              "input": 0,
+              "ctx": {
+                "ge": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 1,
+        "max_new_tokens": 100000,
+        "response": {
+          "detail": [
+            {
+              "type": "less_than_equal",
+              "loc": [
+                "body",
+                "max_new_tokens"
+              ],
+              "msg": "Input should be less than or equal to 32",
+              "input": 100000,
+              "ctx": {
+                "le": 32
+              }
+            }
+          ]
+        }
+      },
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 1,
+        "max_new_tokens": "32",
+        "response": {
+          "detail": [
+            {
+              "type": "int_type",
+              "loc": [
+                "body",
+                "max_new_tokens"
+              ],
+              "msg": "Input should be a valid integer",
+              "input": "32"
+            }
+          ]
+        }
+      },
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 1,
+        "max_new_tokens": true,
+        "response": {
+          "detail": [
+            {
+              "type": "int_type",
+              "loc": [
+                "body",
+                "max_new_tokens"
+              ],
+              "msg": "Input should be a valid integer",
+              "input": true
+            }
+          ]
+        }
+      },
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 1,
+        "max_new_tokens": null,
+        "response": {
+          "detail": [
+            {
+              "type": "value_error",
+              "loc": [
+                "body",
+                "prompt"
+              ],
+              "msg": "Value error, Пустой prompt",
+              "input": " ",
+              "ctx": {
+                "error": {}
+              }
+            }
+          ]
+        }
+      },
+      {
+        "status": 422,
+        "before_calls": 1,
+        "after_calls": 1,
+        "prompt_length": 4097,
+        "max_new_tokens": null,
+        "response": {
+          "detail": [
+            {
+              "type": "string_too_long",
+              "loc": [
+                "body",
+                "prompt"
+              ],
+              "msg": "String should have at most 4096 characters",
+              "input": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+              "ctx": {
+                "max_length": 4096
+              }
+            }
+          ]
+        }
+      },
+      {
+        "status": 200,
+        "before_calls": 1,
+        "after_calls": 2,
+        "prompt_length": 17,
+        "max_new_tokens": 32,
+        "response": {
+          "answer": "STUB ONLY: fixture-A",
+          "output_tokens": 1,
+          "text": "STUB ONLY: fixture-A",
+          "model_id": "fixture-A",
+          "runtime_sha256": "bc7bd5a4806e2e0e3b8569666b251d6c59a8d8e01e37fc37bf95b534023ca547",
+          "request_id": "efa68224-40e6-4bc2-93df-1f57bd7010cd",
+          "queue_seconds": 3.1999952625483274e-06,
+          "generation_seconds": 0.010908900003414601,
+          "total_seconds": 0.01091209999867715
+        }
+      }
+    ]
+  },
+  "completed": true,
+  "duration_seconds": 100.13999999998487
+}
