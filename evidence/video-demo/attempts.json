@@ -1,0 +1,78 @@
+[
+  {
+    "accepted_after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+    "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+    "attempt_id": "f29bc1fc-bb17-466e-9740-e0907f79736b",
+    "error": "RuntimeError: Инъекция сбоя после подготовки",
+    "flow_run_id": "7127c72a-bf42-47b7-b241-32db364872a9",
+    "preparation": {
+      "config_sha256": "fc79981e2248d9f6c85c727f37d57a90d6f05d56c0d49bfd7c9f5ba74cc43408",
+      "data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "preparation_key": "87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c",
+      "rows": 2
+    },
+    "preparation_state": "Completed",
+    "status": "failed",
+    "synthetic": true
+  },
+  {
+    "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3",
+    "attempt_id": "a3d9838c-87f2-44b4-828c-c6da461d87ce",
+    "flow_run_id": "af16f1a0-b8aa-4593-81a6-ba55addc3156",
+    "preparation": {
+      "config_sha256": "fc79981e2248d9f6c85c727f37d57a90d6f05d56c0d49bfd7c9f5ba74cc43408",
+      "data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "preparation_key": "87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c",
+      "rows": 2
+    },
+    "preparation_state": "Cached",
+    "result": {
+      "published": true,
+      "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f",
+      "status": "accepted"
+    },
+    "status": "complete",
+    "synthetic": true
+  },
+  {
+    "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "attempt_id": "a1de02ce-fd14-4022-8e2a-8aac175ccb20",
+    "flow_run_id": "08cbc05b-d46e-4c5f-8ec5-e0e2dcb4145d",
+    "preparation": {
+      "config_sha256": "fc79981e2248d9f6c85c727f37d57a90d6f05d56c0d49bfd7c9f5ba74cc43408",
+      "data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac",
+      "preparation_key": "87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c",
+      "rows": 2
+    },
+    "preparation_state": "Cached",
+    "result": {
+      "published": false,
+      "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f",
+      "status": "accepted"
+    },
+    "status": "complete",
+    "synthetic": true
+  },
+  {
+    "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "accepted_before": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f",
+    "attempt_id": "bab5f5cc-a200-491b-8ab6-b5c36b90eec4",
+    "flow_run_id": "b681acd3-a77a-4747-abae-f84b0f1c3175",
+    "preparation": {
+      "config_sha256": "fc79981e2248d9f6c85c727f37d57a90d6f05d56c0d49bfd7c9f5ba74cc43408",
+      "data_sha256": "1ccb49a057c7f6b7bc51a35055b64ba88b46e86aa192c5e42da38abfa2cfc777",
+      "preparation_key": "0744e5c9a291c1dda685fb1dbec671be88b39714702df2badf582a46709f9f01",
+      "rows": 3
+    },
+    "preparation_state": "Completed",
+    "result": {
+      "published": false,
+      "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f",
+      "status": "accepted"
+    },
+    "status": "complete",
+    "synthetic": true
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "recorded_date": "03.11.2026",
+  "filename": "ДЗ 8-9-10 — видеоотчёт 03-11-2026.mp4",
+  "duration_seconds": 429.93,
+  "width": 1900,
+  "height": 900,
+  "fps": 15,
+  "audio": false,
+  "bytes": 5334423,
+  "sha256": "9aa74fbbfaba73e4db2dc2d77d232bed2fdbd18a8946d565c0076530efd7f86c",
+  "recording_implementation_commit": "29f5579254d5a52c8ba88a9e212c117ed8fcd332",
+  "capture": "FFmpeg gdigrab",
+  "presentation": "Настоящие команды, файлы и HTTP в терминале; нагрузочный замер по сохранённым журналам",
+  "full_decode_check_exit": 0
+}

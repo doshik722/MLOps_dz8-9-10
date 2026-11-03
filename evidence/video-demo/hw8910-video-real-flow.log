@@ -1,0 +1,13 @@
+17:00:19.421 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8334
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+17:00:26.612 | INFO    | Flow run 'academic-elk' - Beginning flow run 'academic-elk' for flow 'hw8910-release'
+17:00:26.842 | INFO    | Task run 'prepare-data-6e1' - Finished in state Cached(type=COMPLETED)
+17:00:26.870 | INFO    | Flow run 'academic-elk' - PREPARATION_STATE Cached 3f6f056e3bf81e4463e2b0aec81059e893b91ac40580e54a3ba53a9f725c6953
+17:00:28.464 | INFO    | Task run 'obtain-verified-artifact-770' - ARTIFACT_VERIFIED 1d0d9ac69f224b7dadf14f7888b26582
+17:00:28.467 | INFO    | Task run 'obtain-verified-artifact-770' - Finished in state Completed()
+17:00:28.756 | INFO    | Task run 'evaluate-full-gate-dc7' - Finished in state Completed()
+17:00:28.788 | INFO    | Task run 'publish-or-preserve-2f3' - Finished in state Completed()
+17:00:28.794 | INFO    | Flow run 'academic-elk' - ATTEMPT {"attempt_id": "f388e8e2-5b28-4abe-85c8-ce152814eb6c", "flow_run_id": "e41a5137-7d6c-4057-b56f-6b034f13595d", "synthetic": false, "preparation_state": "Cached", "preparation": {"data_sha256": "6a2537fac8f3eae517604fbf9f55d77dcf0bf5aa95c277bcadbbd89504cfa73a", "rows": 50, "config_sha256": "288c6b3a825ee6a94b81e9816593fd9c7cf15a7a3f8ce4cdab2c845994d9bd49", "preparation_key": "3f6f056e3bf81e4463e2b0aec81059e893b91ac40580e54a3ba53a9f725c6953"}, "result": {"status": "rejected", "reason": "Регрессия общей метрики accuracy", "published": false}, "status": "complete", "accepted_before": "b3086b6c33b73133e325d96c3e2931a747221bfd8de9c557b3f64ab496cf6c87", "accepted_after": "b3086b6c33b73133e325d96c3e2931a747221bfd8de9c557b3f64ab496cf6c87"}
+17:00:29.810 | INFO    | Flow run 'academic-elk' - Finished in state Completed()
+{"status": "rejected", "reason": "Регрессия общей метрики accuracy", "published": false}
+17:00:29.819 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8334

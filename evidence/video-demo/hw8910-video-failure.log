@@ -1,0 +1,54 @@
+16:57:45.465 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8591
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:57:52.868 | INFO    | Flow run 'admirable-panda' - Beginning flow run 'admirable-panda' for flow 'hw8910-release'
+16:57:53.108 | INFO    | Task run 'prepare-data-73c' - PREPARED 87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c
+16:57:53.115 | INFO    | Task run 'prepare-data-73c' - Finished in state Completed()
+16:57:53.145 | INFO    | Flow run 'admirable-panda' - PREPARATION_STATE Completed 87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c
+16:57:53.148 | INFO    | Flow run 'admirable-panda' - ATTEMPT {"attempt_id": "f29bc1fc-bb17-466e-9740-e0907f79736b", "flow_run_id": "7127c72a-bf42-47b7-b241-32db364872a9", "synthetic": true, "preparation_state": "Completed", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "fc79981e2248d9f6c85c727f37d57a90d6f05d56c0d49bfd7c9f5ba74cc43408", "preparation_key": "87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c"}, "status": "failed", "error": "RuntimeError: Инъекция сбоя после подготовки", "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3", "accepted_after": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3"}
+16:57:54.056 | ERROR   | Flow run 'admirable-panda' - Encountered exception during execution: RuntimeError('Инъекция сбоя после подготовки')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 107, in release_flow
+    raise RuntimeError('Инъекция сбоя после подготовки')
+RuntimeError: Инъекция сбоя после подготовки
+16:57:54.123 | INFO    | Flow run 'admirable-panda' - Finished in state Failed('Flow run encountered an exception: RuntimeError: Инъекция сбоя после подготовки')
+Traceback (most recent call last):
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 139, in <module>
+    main()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 132, in main
+    result = release_flow(str(args.workspace), args.synthetic,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flows.py", line 1887, in __call__
+    return run_flow(
+           ^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2290, in run_flow
+    ret_val = run_flow_sync(**kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2135, in run_flow_sync
+    return engine.state if return_type == "state" else engine.result()
+                                                       ^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 788, in result
+    raise self._raised
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1339, in run_context
+    yield self
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 2133, in run_flow_sync
+    engine.call_flow_fn()
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\flow_engine.py", line 1361, in call_flow_fn
+    result = call_with_parameters(self.flow.fn, self.parameters)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\.venv\Lib\site-packages\prefect\utilities\callables\__init__.py", line 404, in call_with_parameters
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\downloads_programs\Git_hub_progr\Labs_MLops\hw8910-broken\flow.py", line 107, in release_flow
+    raise RuntimeError('Инъекция сбоя после подготовки')
+RuntimeError: Инъекция сбоя после подготовки
+16:57:54.183 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8591

@@ -53,6 +53,18 @@ def main():
     candidate = read(workspace / 'manifest-candidate.json')
     decision = read(workspace / 'release-report.json')
     provenance = read(workspace / 'hw67/provenance.json')
+    video = read(E / 'video.json') if (E / 'video.json').exists() else None
+    video_text = (
+        f'Видео записано {video["recorded_date"]}: `{video["filename"]}`, '
+        f'{video["duration_seconds"]:.1f} с, {video["width"]}×{video["height"]}, '
+        f'{video["fps"]} кадров/с, без звука. SHA256: `{video["sha256"]}`. '
+        'Показаны реальные команды в терминале, фрагменты файлов с номерами строк, '
+        'сбой и восстановление Prefect, тесты и HTTP API; нагрузочный замер показан по сохранённым журналам. '
+        'Видео прикладывается к сдаче отдельно и не включается в Git.'
+        if video else
+        'Видео 5–8 минут пока не записано; ссылка прикладывается к сдаче отдельно. '
+        'В отчёте сохранены проверяемые журналы тяжёлых шагов.'
+    )
     assert decision['passed'] is False and accepted['kind'] == 'base'
     assert smoke['matches_hw67_baseline_output'] and restarted['same_model_runtime_and_answer']
     assert all(row['n'] == 8 for row in benchmark)
@@ -94,7 +106,7 @@ def main():
     (ROOT / 'defects.csv').write_text(output.getvalue(), encoding='utf-8', newline='\n')
     lines = ['# ДЗ 8+9+10: процесс выпуска, проверки и API', '',
         '## 1. Условия, версии и расследование', '',
-        f'Дата: 01.11.2026. Локальный репозиторий: {ROOT}. Исходный commit: `{initial}`. Commit исправления реализации: `{fixed}`. Удалённый репозиторий для этого задания не создавался.', '',
+        f'Дата измерений: 01.11.2026; отчёт обновлён 03.11.2026. Локальный репозиторий: {ROOT}. Исходный commit: `{initial}`. Commit исправления реализации: `{fixed}`. Репозиторий: https://github.com/doshik722/MLOps_dz8-9-10.', '',
         f'Система: {platform.platform()}; Python {platform.python_version()}; логических CPU: {os.cpu_count()}. Генерация: CPU, 4 потока, float32. FastAPI {importlib.metadata.version("fastapi")}, Uvicorn {importlib.metadata.version("uvicorn")}, Prefect {importlib.metadata.version("prefect")}. Полные зависимости — pyproject.toml и uv.lock. Библиотеки генератора закреплены в runtime.', '',
         'Найдены семь независимых причин; подробная трассировка приведена в defects.csv. Восемь новых интеграционных тестов выполнены на исходных release.py/lab.py/service.py из первого коммита: падения — поведенческие AssertionError, не ошибки импорта. Затем те же тесты прошли на исправленном FastAPI и процессе выпуска. Три теста обращаются к настоящему HTTP; пять используют subprocess. Дополнительные пять тестов проверяют fsync, восстановление журнала, изменения артефакта, идентичность выпуска и отрицательные случаи.', '',
         'Красные логи: evidence/original-contract.log, original-integration.log. Зелёный итог: evidence/fast-green.log — 13 исходных + 13 собственных = 26 тестов. Выданные tests/ побайтно сохранены; отпечаток 09bd65e6b886. Исходное ДЗ 6+7 не изменялось.', '',
@@ -151,7 +163,7 @@ def main():
               'Архив submission/hw8910-submission.zip содержит проект, журналы, manifest/release-report и исходные отчёты/данные оценки; веса, .venv, кеши и секреты исключены. База: https://huggingface.co/Qwen/Qwen3-0.6B, exact revision указана в manifest. Адаптер: существующий MLflow ДЗ 6+7, models:/my-qwen-adapter/1, исходные локальные файлы в provenance. Для проверки файлов адаптера на другой машине нужен доступ к этому MLflow или его хранилищу. Готовые отчёты доступны в архиве без сервера. Данные RuSentiment: https://github.com/strawberrypie/rusentiment, CC BY-NC-SA 4.0.', '',
               'Документация: Prefect https://reference.prefect.io/prefect/ ; FastAPI lifespan https://fastapi.tiangolo.com/advanced/events/ . Команды установки и повторного запуска находятся в README.md. Данные и результаты прошлых ДЗ не редактировались.', '',
               '## 11. Видео', '',
-              'Видео 5–8 минут пока не записано; ссылка прикладывается к сдаче отдельно. В отчёте сохранены проверяемые журналы тяжёлых шагов.', '',
+              video_text, '',
               '## Вывод', '',
               'Исправлены семь причин ошибок. Восемь новых регрессионных интеграционных тестов выявляют дефекты исходного прототипа; после исправлений все 26 тестов проходят. Prefect подтвердил восстановление между процессами, Cached/Completed и отсутствие повторных событий публикации. Полный gate сохранил прежний baseline при отклонении кандидата. Настоящий FastAPI подтвердил загрузку и прогрев, ограничения до генерации, фактическую версию и повторный запуск. Замер 8+8 показал очередь при последовательном backend; результаты ограничены малой выборкой и CPU-стендом.', '']
     (ROOT / 'docs').mkdir(exist_ok=True)
@@ -172,7 +184,8 @@ def main():
         'red_integration_tests': 8, 'full_fast_check_exit': 0, 'intentional_failure_exit': 1,
         'synthetic_rollback_observed': rollback['observed_models'], 'real_requests': len(requests),
         'real_errors': sum(row['status'] != 200 for row in requests), 'candidate_rejected': True,
-        'accepted_model': accepted['model_id'], 'video_recorded': False})
+        'accepted_model': accepted['model_id'], 'video_recorded': video is not None,
+        'video_sha256': video['sha256'] if video else None})
     submission = ROOT / 'submission'
     submission.mkdir(exist_ok=True)
     subprocess.run(['git', 'bundle', 'create', str(submission / 'hw8910-history.bundle'), '--all'], cwd=ROOT, check=True)

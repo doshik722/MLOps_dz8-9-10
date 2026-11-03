@@ -1,0 +1,13 @@
+16:58:09.468 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8487
+See https://www.prefect.io/docs/v3/concepts/server#how-to-guides for more information on running a dedicated Prefect server.
+16:58:16.215 | INFO    | Flow run 'lemon-whippet' - Beginning flow run 'lemon-whippet' for flow 'hw8910-release'
+16:58:16.430 | INFO    | Task run 'prepare-data-416' - Finished in state Cached(type=COMPLETED)
+16:58:16.461 | INFO    | Flow run 'lemon-whippet' - PREPARATION_STATE Cached 87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c
+16:58:16.499 | INFO    | Task run 'obtain-verified-artifact-7f4' - ARTIFACT_VERIFIED fixture-B
+16:58:16.504 | INFO    | Task run 'obtain-verified-artifact-7f4' - Finished in state Completed()
+16:58:16.539 | INFO    | Task run 'evaluate-full-gate-8c0' - Finished in state Completed()
+16:58:16.599 | INFO    | Task run 'publish-or-preserve-660' - Finished in state Completed()
+16:58:16.604 | INFO    | Flow run 'lemon-whippet' - ATTEMPT {"attempt_id": "a3d9838c-87f2-44b4-828c-c6da461d87ce", "flow_run_id": "af16f1a0-b8aa-4593-81a6-ba55addc3156", "synthetic": true, "preparation_state": "Cached", "preparation": {"data_sha256": "19b8b0a21157bd3e44e7afd00735c6fd9cdf05ee7f668a5013f5c9f1ff16c1ac", "rows": 2, "config_sha256": "fc79981e2248d9f6c85c727f37d57a90d6f05d56c0d49bfd7c9f5ba74cc43408", "preparation_key": "87ccb0e41f88b9d9f050ad0ef6c7c4eb2dcc470191cfa2824bcd67518204645c"}, "result": {"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": true}, "status": "complete", "accepted_before": "a804380033ce84949b5aa354e0a3fd52d4596bde31831f9bcecbb6d734851ba3", "accepted_after": "3434debe765fd4149fcfd2d6953d0507a37673770ab327c236ccba3c911a537f"}
+16:58:17.410 | INFO    | Flow run 'lemon-whippet' - Finished in state Completed()
+{"status": "accepted", "release_id": "935499c45ff6af7142e3dd6463d207047795887872759d9751b9f4de7ed2b52f", "published": true}
+16:58:17.433 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8487
